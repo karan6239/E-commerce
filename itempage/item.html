@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details – NOVA Fashion</title>
+    <meta name="description" content="View product details, choose size, and purchase stylish apparel on NOVA Fashion.">
+    <link rel="stylesheet" href="/itempage/item.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/landingpage/landing.html">NOVA</a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="/landingpage/landing.html">Home</a>
+                <a href="/man category/shirts/shirts.html">Shirts</a>
+                <a href="/man category/pants/pants.html">Pants</a>
+                <a href="/man category/shoes/shoes.html">Shoes</a>
+                <a href="/man category/sunglasses/sunglass.html">Sunglasses</a>
+                <a href="/man category/watches/watches.html">Watches</a>
+                <a href="/man category/wallet/wallet.html">Wallets</a>
+            </nav>
+
+            <div class="nav-icons">
+                <a href="/checkout/checkout.html" class="cart-link" aria-label="Shopping Cart">
+                    <i class='bx bx-cart'></i>
+                    <span id="cartCount" class="cart-badge"></span>
+                </a>
+                <i class='bx bx-user' id="userIcon" title="Account / Sign In" style="cursor: pointer;"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="page-container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="/landingpage/landing.html">Home</a>
+            <i class='bx bx-chevron-right'></i>
+            <a href="/man category/man.html" id="breadcrumbCategory">Collection</a>
+            <i class='bx bx-chevron-right'></i>
+            <span id="breadcrumbProduct" class="current">Product</span>
+        </nav>
+
+        <!-- Product Card -->
+        <div class="product-layout">
+            
+            <!-- Left: Product Gallery -->
+            <div class="product-gallery">
+                <div class="image-wrapper">
+                    <span class="badge-tag" id="productCategoryBadge">NOVA EXCLUSIVE</span>
+                    <img id="productImage" src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800" alt="Product Image" loading="eager">
+                </div>
+            </div>
+
+            <!-- Right: Product Info & Actions -->
+            <div class="product-info">
+                
+                <div class="product-rating">
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <span class="rating-text">4.8 (124 Verified Reviews)</span>
+                </div>
+
+                <h1 id="productName" class="product-title">Loading Product...</h1>
+                
+                <div class="price-container">
+                    <span id="productPrice" class="current-price">₹0</span>
+                    <span id="originalPrice" class="original-price">₹0</span>
+                    <span class="discount-pill">20% OFF</span>
+                </div>
+
+                <div class="stock-status" id="stockStatus">
+                    <i class='bx bx-check-circle'></i> In Stock &bull; Ready to Dispatch
+                </div>
+
+                <p id="productDescription" class="product-desc">
+                    Premium quality tailoring with breathable fabric, precision stitching, and a modern silhouette tailored for elevated everyday luxury.
+                </p>
+
+                <!-- Size Selector -->
+                <div class="selector-group" id="sizeSelectorGroup">
+                    <div class="selector-header">
+                        <label class="group-label">Select Size</label>
+                        <span class="size-guide-btn"><i class='bx bx-ruler'></i> Size Guide</span>
+                    </div>
+                    <div class="size-pills">
+                        <button type="button" class="size-pill" data-size="S">S</button>
+                        <button type="button" class="size-pill active" data-size="M">M</button>
+                        <button type="button" class="size-pill" data-size="L">L</button>
+                        <button type="button" class="size-pill" data-size="XL">XL</button>
+                        <button type="button" class="size-pill" data-size="XXL">XXL</button>
+                    </div>
+                </div>
+
+                <!-- Quantity Selector -->
+                <div class="selector-group">
+                    <label class="group-label">Quantity</label>
+                    <div class="quantity-control">
+                        <button type="button" class="qty-btn" id="qtyMinus" aria-label="Decrease quantity">&minus;</button>
+                        <input type="number" id="qtyInput" value="1" min="1" max="10" readonly>
+                        <button type="button" class="qty-btn" id="qtyPlus" aria-label="Increase quantity">&plus;</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button type="button" class="btn btn-primary" id="btnBuyNow">
+                        <i class='bx bx-bolt-circle'></i> Buy Now
+                    </button>
+                    <button type="button" class="btn btn-outline" id="btnAddToCart">
+                        <i class='bx bx-shopping-bag'></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product Perks & Assurance -->
+                <div class="product-perks">
+                    <div class="perk-item">
+                        <i class='bx bx-package'></i>
+                        <div>
+                            <strong>Free Shipping</strong>
+                            <p>On all domestic orders over ₹2000</p>
+                        </div>
+                    </div>
+                    <div class="perk-item">
+                        <i class='bx bx-refresh'></i>
+                        <div>
+                            <strong>30-Day Easy Returns</strong>
+                            <p>Hassle-free exchanges and returns</p>
+                        </div>
+                    </div>
+                    <div class="perk-item">
+                        <i class='bx bx-shield-quarter'></i>
+                        <div>
+                            <strong>100% Authentic Guarantee</strong>
+                            <p>Crafted with premium sustainable materials</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 NOVA Fashion. Designed for modern living.</p>
+        </div>
+    </footer>
+
+    <!-- Toast container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="/itempage/item.js"></script>
+</body>
+</html>
