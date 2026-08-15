@@ -95,12 +95,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Breadcrumbs & category links
         if (breadcrumbCat) {
             breadcrumbCat.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-            if (category.includes('pant')) breadcrumbCat.href = '/man category/pants/pants.html';
-            else if (category.includes('shoe')) breadcrumbCat.href = '/man category/shoes/shoes.html';
-            else if (category.includes('sunglass')) breadcrumbCat.href = '/man category/sunglasses/sunglass.html';
-            else if (category.includes('wallet')) breadcrumbCat.href = '/man category/wallet/wallet.html';
-            else if (category.includes('watch')) breadcrumbCat.href = '/man category/watches/watches.html';
-            else breadcrumbCat.href = '/man category/man.html';
+            if (category.includes('pant')) breadcrumbCat.href = '../man category/pants/pants.html';
+            else if (category.includes('shoe')) breadcrumbCat.href = '../man category/shoes/shoes.html';
+            else if (category.includes('sunglass')) breadcrumbCat.href = '../man category/sunglasses/sunglass.html';
+            else if (category.includes('wallet')) breadcrumbCat.href = '../man category/wallet/wallet.html';
+            else if (category.includes('watch')) breadcrumbCat.href = '../man category/watches/watches.html';
+            else breadcrumbCat.href = '../man category/man.html';
         }
         if (breadcrumbProd) breadcrumbProd.textContent = product.name;
 
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             btnBuyNow.addEventListener('click', () => {
                 if (!currentProduct) return;
                 addToCart(currentProduct, selectedSize, selectedQuantity);
-                window.location.href = '/checkout/checkout.html';
+                window.location.href = '../checkout/checkout.html';
             });
         }
     }
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         toast.innerHTML = `
             <i class='bx bx-check-circle' style='color:#10b981; font-size:20px;'></i>
             <span>${message}</span>
-            ${showCheckoutAction ? '<a href="/checkout/checkout.html" class="toast-action">Checkout &rarr;</a>' : ''}
+            ${showCheckoutAction ? '<a href="../checkout/checkout.html" class="toast-action">Checkout &rarr;</a>' : ''}
         `;
 
         container.appendChild(toast);
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         window.location.reload();
                     }
                 } else {
-                    window.location.href = '/signin/signin.html';
+                    window.location.href = '../signin/signin.html';
                 }
             });
         }

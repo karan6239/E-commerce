@@ -27,17 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', (e) => {
             // If card has specific id, let that handler run or route specifically
             if (card.id === 'sunglasspage' || title.includes('sunglass')) {
-                window.location.href = "/man category/sunglasses/sunglass.html";
+                window.location.href = "../man category/sunglasses/sunglass.html";
             } else if (card.id === 'shoespage' || title.includes('shoe')) {
-                window.location.href = "/man category/shoes/shoes.html";
+                window.location.href = "../man category/shoes/shoes.html";
             } else if (card.id === 'watchespage' || title.includes('watch')) {
-                window.location.href = "/man category/watches/watches.html";
+                window.location.href = "../man category/watches/watches.html";
             } else if (card.id === 'walletpage' || title.includes('wallet')) {
-                window.location.href = "/man category/wallet/wallet.html";
+                window.location.href = "../man category/wallet/wallet.html";
             } else if (title.includes('pant') || title.includes('money') || title.includes('gym')) {
-                window.location.href = "/man category/pants/pants.html";
+                window.location.href = "../man category/pants/pants.html";
             } else {
-                window.location.href = "/man category/shirts/shirts.html";
+                window.location.href = "../man category/shirts/shirts.html";
             }
         });
     });
@@ -141,17 +141,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div style="text-align:center; padding: 15px 0;">
                     <p style="color: #6b7280; margin: 0 0 10px;">Looking for "<b>${query}</b>"?</p>
                     <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
-                        <a href="/man category/shirts/shirts.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Shirts</a>
-                        <a href="/man category/pants/pants.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Pants</a>
-                        <a href="/man category/shoes/shoes.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Shoes</a>
-                        <a href="/man category/sunglasses/sunglass.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Sunglasses</a>
+                        <a href="../man category/shirts/shirts.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Shirts</a>
+                        <a href="../man category/pants/pants.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Pants</a>
+                        <a href="../man category/shoes/shoes.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Shoes</a>
+                        <a href="../man category/sunglasses/sunglass.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Sunglasses</a>
                     </div>
                 </div>
             `;
         } else if (products.length > 0) {
             products.slice(0, 6).forEach(product => {
                 const itemEl = document.createElement('a');
-                itemEl.href = `/itempage/item.html?id=${product.id}`;
+                itemEl.href = `../itempage/item.html?id=${product.id}`;
                 itemEl.style.cssText = 'display: flex; align-items: center; gap: 14px; padding: 10px; border-radius: 8px; text-decoration: none; color: #111; background: #f9fafb; transition: background 0.2s;';
                 itemEl.onmouseover = () => itemEl.style.backgroundColor = '#f3f4f6';
                 itemEl.onmouseout = () => itemEl.style.backgroundColor = '#f9fafb';
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cartIcon) {
         cartIcon.style.cursor = "pointer";
         cartIcon.addEventListener("click", () => {
-            window.location.href = "/checkout/checkout.html";
+            window.location.href = "../checkout/checkout.html";
         });
     }
 
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.location.reload();
                 }
             } else {
-                window.location.href = "/signin/signin.html";
+                window.location.href = "../signin/signin.html";
             }
         });
     });
@@ -226,14 +226,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const shopBT = document.getElementById("shopBT");
     if (shopBT) {
         shopBT.addEventListener("click", () => {
-            window.location.href = "/man category/shirts/shirts.html";
+            window.location.href = "../man category/shirts/shirts.html";
         });
     }
 
     const vbt = document.getElementById("vbt");
     if (vbt) {
         vbt.addEventListener("click", () => {
-            window.location.href = "/man category/shirts/shirts.html";
+            window.location.href = "../man category/shirts/shirts.html";
         });
     }
 

@@ -127,7 +127,7 @@ function renderCartSummary() {
             <div style="padding: 24px 0; text-align: center; color: #6b7280;">
                 <i class='bx bx-shopping-bag' style='font-size: 40px; color: #d1d5db;'></i>
                 <p style="margin-top: 10px; font-weight: 500;">Your cart is currently empty</p>
-                <a href="/man category/man.html" style="display: inline-block; margin-top: 12px; color: #111; font-weight: 600; text-decoration: underline; font-size: 13px;">Browse Collection &rarr;</a>
+                <a href="../man category/man.html" style="display: inline-block; margin-top: 12px; color: #111; font-weight: 600; text-decoration: underline; font-size: 13px;">Browse Collection &rarr;</a>
             </div>
         `;
         disablePlaceOrderButtons(true);
@@ -490,7 +490,7 @@ function showSuccessModal(orderNumber) {
 }
 
 function goHome() {
-    window.location.href = '/landingpage/landing.html';
+    window.location.href = '../landingpage/landing.html';
 }
 
 function showMessage(message, type = 'info') {

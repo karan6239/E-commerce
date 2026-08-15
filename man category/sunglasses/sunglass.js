@@ -43,7 +43,7 @@ function initCartState() {
         icon.style.cursor = 'pointer';
         icon.onclick = (e) => {
             if (e.target.closest('#searchinput')) return;
-            window.location.href = '/checkout/checkout.html';
+            window.location.href = '../../checkout/checkout.html';
         };
     });
 }
@@ -114,7 +114,7 @@ function initAuthState() {
         } else {
             icon.title = 'Sign In / Register';
             icon.onclick = () => {
-                window.location.href = '/signin/signin.html';
+                window.location.href = '../../signin/signin.html';
             };
         }
     });
@@ -124,13 +124,13 @@ function initAuthState() {
 function initNavbarLinks() {
     const menus = document.querySelectorAll('.menu');
     const linksHTML = `
-        <li><a href="/landingpage/landing.html">Home</a></li>
-        <li><a href="/man category/shirts/shirts.html">Shirts</a></li>
-        <li><a href="/man category/pants/pants.html">Pants</a></li>
-        <li><a href="/man category/shoes/shoes.html">Shoes</a></li>
-        <li><a href="/man category/sunglasses/sunglass.html">Sunglasses</a></li>
-        <li><a href="/man category/watches/watches.html">Watches</a></li>
-        <li><a href="/man category/wallet/wallet.html">Wallets</a></li>
+        <li><a href="../../landingpage/landing.html">Home</a></li>
+        <li><a href="../../man category/shirts/shirts.html">Shirts</a></li>
+        <li><a href="../../man category/pants/pants.html">Pants</a></li>
+        <li><a href="../../man category/shoes/shoes.html">Shoes</a></li>
+        <li><a href="../../man category/sunglasses/sunglass.html">Sunglasses</a></li>
+        <li><a href="../../man category/watches/watches.html">Watches</a></li>
+        <li><a href="../../man category/wallet/wallet.html">Wallets</a></li>
     `;
 
     menus.forEach(menu => {
@@ -161,16 +161,16 @@ function initMobileNav() {
                 <button class="drawer-close" id="drawerClose">&times;</button>
             </div>
             <ul class="drawer-links">
-                <li><a href="/landingpage/landing.html"><i class='bx bx-home'></i> Home</a></li>
-                <li><a href="/man category/shirts/shirts.html"><i class='bx bx-closet'></i> Shirts</a></li>
-                <li><a href="/man category/pants/pants.html"><i class='bx bx-layer'></i> Pants</a></li>
-                <li><a href="/man category/shoes/shoes.html"><i class='bx bx-walk'></i> Shoes & Footwear</a></li>
-                <li><a href="/man category/sunglasses/sunglass.html"><i class='bx bx-glasses'></i> Sunglasses</a></li>
-                <li><a href="/man category/watches/watches.html"><i class='bx bx-time'></i> Luxury Watches</a></li>
-                <li><a href="/man category/wallet/wallet.html"><i class='bx bx-wallet'></i> Leather Wallets</a></li>
+                <li><a href="../../landingpage/landing.html"><i class='bx bx-home'></i> Home</a></li>
+                <li><a href="../../man category/shirts/shirts.html"><i class='bx bx-closet'></i> Shirts</a></li>
+                <li><a href="../../man category/pants/pants.html"><i class='bx bx-layer'></i> Pants</a></li>
+                <li><a href="../../man category/shoes/shoes.html"><i class='bx bx-walk'></i> Shoes & Footwear</a></li>
+                <li><a href="../../man category/sunglasses/sunglass.html"><i class='bx bx-glasses'></i> Sunglasses</a></li>
+                <li><a href="../../man category/watches/watches.html"><i class='bx bx-time'></i> Luxury Watches</a></li>
+                <li><a href="../../man category/wallet/wallet.html"><i class='bx bx-wallet'></i> Leather Wallets</a></li>
                 <li class="drawer-divider"></li>
-                <li><a href="/checkout/checkout.html"><i class='bx bx-shopping-bag'></i> Shopping Bag</a></li>
-                <li><a href="/signin/signin.html"><i class='bx bx-user'></i> Account</a></li>
+                <li><a href="../../checkout/checkout.html"><i class='bx bx-shopping-bag'></i> Shopping Bag</a></li>
+                <li><a href="../../signin/signin.html"><i class='bx bx-user'></i> Account</a></li>
             </ul>
         `;
         document.body.appendChild(drawer);
@@ -234,7 +234,7 @@ function initProductInteractions() {
             selectedList.push(productObj);
             localStorage.setItem('selectedProducts', JSON.stringify(selectedList));
 
-            window.location.href = `/itempage/item.html?id=${encodeURIComponent(productObj.id)}&name=${encodeURIComponent(productObj.name)}`;
+            window.location.href = `../../itempage/item.html?id=${encodeURIComponent(productObj.id)}&name=${encodeURIComponent(productObj.name)}`;
         });
 
         const addBtn = card.querySelector('.shopadd');
@@ -354,7 +354,7 @@ function showGlobalToast(message) {
         toast.innerHTML = `
             <i class='bx bx-check-circle'></i>
             <span id="toastMessage">${message}</span>
-            <a href="/checkout/checkout.html">View Bag</a>
+            <a href="../../checkout/checkout.html">View Bag</a>
         `;
         document.body.appendChild(toast);
     } else {

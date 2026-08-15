@@ -162,7 +162,7 @@ form.addEventListener('submit', async (e) => {
 
             showToast('Welcome back to NOVA! Redirecting…');
             setTimeout(() => {
-                window.location.href = '/landingpage/landing.html';
+                window.location.href = '../landingpage/landing.html';
             }, 1200);
         } else {
             submitBtn.classList.remove('loading');
