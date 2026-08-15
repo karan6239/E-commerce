@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', (e) => {
             // If card has specific id, let that handler run or route specifically
             if (card.id === 'sunglasspage' || title.includes('sunglass')) {
-                window.location.href = "../man category/sunglasses/sunglass.html";
+                window.location.href = "../man category/sunglasses/sunglasses.html";
             } else if (card.id === 'shoespage' || title.includes('shoe')) {
                 window.location.href = "../man category/shoes/shoes.html";
             } else if (card.id === 'watchespage' || title.includes('watch')) {
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="../man category/shirts/shirts.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Shirts</a>
                         <a href="../man category/pants/pants.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Pants</a>
                         <a href="../man category/shoes/shoes.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Shoes</a>
-                        <a href="../man category/sunglasses/sunglass.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Sunglasses</a>
+                        <a href="../man category/sunglasses/sunglasses.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Sunglasses</a>
                     </div>
                 </div>
             `;

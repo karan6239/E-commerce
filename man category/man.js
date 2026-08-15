@@ -131,7 +131,7 @@ function initNavbarLinks() {
         <li><a href="../man category/shirts/shirts.html">Shirts</a></li>
         <li><a href="../man category/pants/pants.html">Pants</a></li>
         <li><a href="../man category/shoes/shoes.html">Shoes</a></li>
-        <li><a href="../man category/sunglasses/sunglass.html">Sunglasses</a></li>
+        <li><a href="../man category/sunglasses/sunglasses.html">Sunglasses</a></li>
         <li><a href="../man category/watches/watches.html">Watches</a></li>
         <li><a href="../man category/wallet/wallet.html">Wallets</a></li>
     `;
@@ -170,7 +170,7 @@ function initMobileNav() {
                 <li><a href="../man category/shirts/shirts.html"><i class='bx bx-closet'></i> Shirts</a></li>
                 <li><a href="../man category/pants/pants.html"><i class='bx bx-layer'></i> Pants</a></li>
                 <li><a href="../man category/shoes/shoes.html"><i class='bx bx-walk'></i> Shoes & Footwear</a></li>
-                <li><a href="../man category/sunglasses/sunglass.html"><i class='bx bx-glasses'></i> Sunglasses</a></li>
+                <li><a href="../man category/sunglasses/sunglasses.html"><i class='bx bx-glasses'></i> Sunglasses</a></li>
                 <li><a href="../man category/watches/watches.html"><i class='bx bx-time'></i> Luxury Watches</a></li>
                 <li><a href="../man category/wallet/wallet.html"><i class='bx bx-wallet'></i> Leather Wallets</a></li>
                 <li class="drawer-divider"></li>
