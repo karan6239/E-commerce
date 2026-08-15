@@ -73,10 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ================= 5. LIVE SEARCH WITH BACKEND API & FALLBACK =================
     const searchInputBox = document.getElementById("searchinput");
-    const searchInput    = document.getElementById("searchi");
-    const searchIcon     = document.querySelector(".bx-search");
-    const searchArea     = document.querySelector(".searcharea");
-    const closeBtn       = document.querySelector(".close-btn");
+    const searchInput = document.getElementById("searchi");
+    const searchIcon = document.querySelector(".bx-search");
+    const searchArea = document.querySelector(".searcharea");
+    const closeBtn = document.querySelector(".close-btn");
     let searchDebounceTimer = null;
 
     if (searchIcon && searchInputBox) {
@@ -88,9 +88,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const searchBtn = document.getElementById("searchbtn");
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener("click", () => {
+            const query = searchInput.value.trim();
+            if (query.length >= 2) {
+                if (searchArea) searchArea.classList.add("active");
+                if (typeof window.searchProducts === 'function') {
+                    renderSearchResults(window.searchProducts(query), query);
+                }
+            } else {
+                searchInput.focus();
+            }
+        });
+    }
+
     if (searchInput && searchArea) {
         searchInput.addEventListener("focus", () => {
             searchArea.classList.add("active");
+        });
+
+        searchInput.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                const query = searchInput.value.trim();
+                if (query.length >= 2) {
+                    searchArea.classList.add("active");
+                    if (typeof window.searchProducts === 'function') {
+                        renderSearchResults(window.searchProducts(query), query);
+                    }
+                }
+            }
         });
 
         searchInput.addEventListener("input", (e) => {
@@ -128,10 +156,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Close search dropdown on clicking outside
+    document.addEventListener("click", (e) => {
+        if (searchArea && searchArea.classList.contains("active")) {
+            if (!searchArea.contains(e.target) && !searchInput?.contains(e.target) && !searchIcon?.contains(e.target) && !searchInputBox?.contains(e.target)) {
+                searchArea.classList.remove("active");
+            }
+        }
+    });
+
     function renderSearchResults(products, query = '') {
         if (!searchArea) return;
 
-        searchArea.innerHTML = '<button class="close-btn">&times;</button>';
+        searchArea.innerHTML = `
+            <div class="search-header">
+                <span>${products.length > 0 ? `${products.length} Results` : (query.length >= 2 ? 'No Results' : 'Search')}</span>
+                <button class="close-btn" aria-label="Close">&times;</button>
+            </div>
+        `;
+
         const newClose = searchArea.querySelector('.close-btn');
         if (newClose) {
             newClose.addEventListener('click', () => searchArea.classList.remove('active'));
@@ -139,35 +182,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const resultsContainer = document.createElement('div');
         resultsContainer.className = 'search-results-list';
-        resultsContainer.style.cssText = 'padding: 20px; max-height: 400px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px;';
 
         if (products.length === 0 && query.length >= 2) {
             resultsContainer.innerHTML = `
                 <div style="text-align:center; padding: 15px 0;">
-                    <p style="color: #6b7280; margin: 0 0 10px;">Looking for "<b>${query}</b>"?</p>
+                    <p style="color: #6b7280; margin: 0 0 10px; font-size: 13px;">Looking for "<b>${query}</b>"?</p>
                     <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
-                        <a href="../man category/shirts/shirts.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Shirts</a>
-                        <a href="../man category/pants/pants.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Pants</a>
-                        <a href="../man category/shoes/shoes.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Shoes</a>
-                        <a href="../man category/sunglasses/sunglasses.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px;">Sunglasses</a>
+                        <a href="../man category/shirts/shirts.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px; font-weight: 500;">Shirts</a>
+                        <a href="../man category/pants/pants.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px; font-weight: 500;">Pants</a>
+                        <a href="../man category/shoes/shoes.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px; font-weight: 500;">Shoes</a>
+                        <a href="../man category/sunglasses/sunglasses.html" style="padding: 6px 12px; background: #eee; border-radius: 20px; text-decoration: none; color: #111; font-size: 12px; font-weight: 500;">Sunglasses</a>
                     </div>
                 </div>
             `;
         } else if (products.length > 0) {
-            products.slice(0, 6).forEach(product => {
+            products.forEach(product => {
                 const itemEl = document.createElement('a');
                 itemEl.href = `../itempage/item.html?id=${product.id}`;
-                itemEl.style.cssText = 'display: flex; align-items: center; gap: 14px; padding: 10px; border-radius: 8px; text-decoration: none; color: #111; background: #f9fafb; transition: background 0.2s;';
-                itemEl.onmouseover = () => itemEl.style.backgroundColor = '#f3f4f6';
-                itemEl.onmouseout = () => itemEl.style.backgroundColor = '#f9fafb';
+                itemEl.style.cssText = 'display: flex; align-items: center; gap: 14px; padding: 10px 12px; border-radius: 10px; text-decoration: none; color: #111; background: #f9fafb; transition: all 0.2s ease; border: 1px solid rgba(0,0,0,0.03);';
+                itemEl.onmouseover = () => {
+                    itemEl.style.backgroundColor = '#f3f4f6';
+                    itemEl.style.transform = 'translateX(2px)';
+                };
+                itemEl.onmouseout = () => {
+                    itemEl.style.backgroundColor = '#f9fafb';
+                    itemEl.style.transform = 'translateX(0)';
+                };
 
                 itemEl.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}" style="width: 44px; height: 44px; object-fit: cover; border-radius: 6px;" onerror="this.src='https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=200'">
-                    <div style="flex: 1;">
-                        <h4 style="font-size: 13px; margin: 0; font-weight: 600;">${product.name}</h4>
-                        <span style="font-size: 11px; color: #6b7280; text-transform: uppercase;">${product.category || 'Apparel'}</span>
+                    <img src="${product.image}" alt="${product.name}" style="width: 46px; height: 46px; object-fit: cover; border-radius: 8px; background: #eee;" onerror="this.src='https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=200'">
+                    <div style="flex: 1; min-width: 0;">
+                        <h4 style="font-size: 13px; margin: 0; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${product.name}</h4>
+                        <span style="font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.3px;">${product.category || 'Apparel'}</span>
                     </div>
-                    <strong style="font-size: 13px; color: #111;">₹${Math.round(product.price).toLocaleString()}</strong>
+                    <strong style="font-size: 13px; color: #111; font-weight: 600;">₹${Math.round(product.price).toLocaleString()}</strong>
                 `;
                 resultsContainer.appendChild(itemEl);
             });
@@ -180,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function syncCartCount() {
         const cartItems = JSON.parse(localStorage.getItem("cartItems") || localStorage.getItem("nova_cart") || "[]");
         const totalCount = cartItems.reduce((acc, item) => acc + (parseInt(item.quantity) || 1), 0);
-        
+
         const countSpan = document.getElementById("cartCount");
         if (countSpan) {
             countSpan.textContent = totalCount > 0 ? totalCount : "";
@@ -189,6 +237,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     syncCartCount();
     window.addEventListener("storage", syncCartCount);
+
+    // ================= 7. WISHLIST & CART HANDLERS =================
+    const heartIcons = document.querySelectorAll(".bx-heart");
+    heartIcons.forEach(heart => {
+        heart.style.cursor = "pointer";
+        heart.addEventListener("click", () => {
+            alert("Wishlist feature active. Click the heart on any product to save items.");
+        });
+    });
 
     const cartIcon = document.querySelector(".bx-cart, .bx-shopping-bag");
     if (cartIcon) {

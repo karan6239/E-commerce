@@ -3,6 +3,8 @@
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
+    initLogoNavigation();
+    initSearchNavbar();
     initCartState();
     initAuthState();
     initWishlist();
@@ -10,7 +12,141 @@ document.addEventListener('DOMContentLoaded', () => {
     initCatalogGrid();
 });
 
-// ================= 1. CART ENGINE =================
+// Universal Navbar Event Handler for all subcategories and pages
+document.addEventListener('click', (e) => {
+    // Shopping bag / Cart icon
+    const bagIcon = e.target.closest('.bx-shopping-bag, .bx-cart, .cart-link, [title="Shopping Bag"]');
+    if (bagIcon && !e.target.closest('.shopadd') && !e.target.closest('#searchinput')) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = getAppRoot() + 'checkout/checkout.html';
+        return;
+    }
+
+    // Account / User icon
+    const userIcon = e.target.closest('#userIcon, .bx-user, [title="Account"]');
+    if (userIcon && !e.target.closest('#searchinput')) {
+        e.preventDefault();
+        e.stopPropagation();
+        const user = JSON.parse(localStorage.getItem('currentUser') || localStorage.getItem('user') || 'null');
+        if (user && (user.username || user.first_name || user.email || user.name)) {
+            const displayName = user.username || user.first_name || user.name || (user.email ? user.email.split('@')[0] : 'User');
+            if (confirm(`Signed in as ${displayName}.\nDo you wish to sign out?`)) {
+                localStorage.removeItem('currentUser');
+                localStorage.removeItem('user');
+                localStorage.removeItem('access_token');
+                showToast('You have signed out.');
+                setTimeout(() => window.location.reload(), 600);
+            }
+        } else {
+            window.location.href = getAppRoot() + 'signin/signin.html';
+        }
+        return;
+    }
+
+    // Search toggle icon
+    const searchIcon = e.target.closest('.search-icon, .icon .bx-search, .navbar .bx-search');
+    if (searchIcon) {
+        e.preventDefault();
+        e.stopPropagation();
+        const searchBox = document.getElementById('searchinput');
+        const searchInput = document.getElementById('searchi') || searchBox?.querySelector('input');
+        if (searchBox) {
+            searchBox.classList.toggle('active');
+            if (searchBox.classList.contains('active') && searchInput) {
+                searchInput.focus();
+            }
+        }
+        return;
+    }
+
+    // Navbar wishlist icon
+    const navHeart = e.target.closest('.icon > .bx-heart, .navbar > .bx-heart, [title="Wishlist"]');
+    if (navHeart && !e.target.closest('.cart-item')) {
+        e.preventDefault();
+        e.stopPropagation();
+        showToast('Wishlist feature active. Click the heart on any product to save items.');
+        return;
+    }
+
+    // Logo click
+    const logo = e.target.closest('#logo, .logo a');
+    if (logo) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = getAppRoot() + 'landingpage/landing.html';
+        return;
+    }
+});
+
+function initLogoNavigation() {
+    document.querySelectorAll('#logo, .logo a').forEach(logo => {
+        logo.onclick = (e) => {
+            e.preventDefault();
+            window.location.href = getAppRoot() + 'landingpage/landing.html';
+        };
+    });
+}
+
+// Helper for exact relative path calculation based on directory depth
+function getAppRoot() {
+    const rawPath = window.location.pathname.replace(/\\/g, '/');
+    const path = decodeURIComponent(rawPath).toLowerCase();
+
+    // Check if we are inside any 2-level subfolder (like /man category/pants/, /man category/watches/, etc.)
+    const subCategories = ['/pants/', '/shirts/', '/shoes/', '/sunglasses/', '/wallet/', '/watches/'];
+    if (path.includes('/man category/') && subCategories.some(sub => path.includes(sub))) {
+        return '../../';
+    }
+    // Check if we are inside any 1-level folder
+    const topFolders = ['/man category/', '/landingpage/', '/checkout/', '/itempage/', '/signin/', '/signup/'];
+    if (topFolders.some(f => path.includes(f))) {
+        return '../';
+    }
+    return './';
+}
+
+// ================= 1. SEARCH NAVBAR TOGGLE =================
+function initSearchNavbar() {
+    const searchIcons = document.querySelectorAll('.search-icon, .icon .bx-search, .navbar .bx-search');
+    const searchBox = document.getElementById('searchinput');
+    const searchInput = document.getElementById('searchi') || searchBox?.querySelector('input');
+    const searchBtn = document.getElementById('searchbtn');
+
+    searchIcons.forEach(icon => {
+        icon.style.cursor = 'pointer';
+        icon.onclick = (e) => {
+            e.stopPropagation();
+            if (searchBox) {
+                searchBox.classList.toggle('active');
+                if (searchBox.classList.contains('active') && searchInput) {
+                    searchInput.focus();
+                }
+            }
+        };
+    });
+
+    if (searchBox) {
+        document.addEventListener('click', (e) => {
+            if (searchBox.classList.contains('active')) {
+                const clickedInside = searchBox.contains(e.target) || Array.from(searchIcons).some(icon => icon.contains(e.target));
+                if (!clickedInside) {
+                    searchBox.classList.remove('active');
+                }
+            }
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    searchBox.classList.remove('active');
+                }
+            });
+        }
+    }
+}
+
+// ================= 2. CART ENGINE =================
 function getCartItems() {
     try {
         const stored = localStorage.getItem('cartItems') || localStorage.getItem('nova_cart');
@@ -36,15 +172,11 @@ function initCartState() {
         }
     });
 
-    document.querySelectorAll('.bx-shopping-bag, .bx-cart, .cart-link').forEach(icon => {
+    document.querySelectorAll('.bx-shopping-bag, .bx-cart, .cart-link, [title="Shopping Bag"]').forEach(icon => {
         icon.style.cursor = 'pointer';
         icon.onclick = (e) => {
-            if (e.target.closest('#searchinput')) return;
-            // Determine relative path to checkout
-            const isInSubDir = window.location.pathname.includes('/man category/') || 
-                               window.location.pathname.includes('/landingpage/') ||
-                               window.location.pathname.includes('/itempage/');
-            window.location.href = isInSubDir ? '../../checkout/checkout.html' : './checkout/checkout.html';
+            if (e.target.closest('#searchinput') || e.target.closest('.shopadd')) return;
+            window.location.href = getAppRoot() + 'checkout/checkout.html';
         };
     });
 }
@@ -52,7 +184,7 @@ function initCartState() {
 function updateCartCount() {
     const items = getCartItems();
     const totalCount = items.reduce((acc, item) => acc + (parseInt(item.quantity) || 1), 0);
-    
+
     document.querySelectorAll('#cartCount, .cart-badge').forEach(badge => {
         badge.textContent = totalCount > 0 ? totalCount : '';
     });
@@ -60,18 +192,22 @@ function updateCartCount() {
 
 function addProductToCart(productData, size = 'Standard', qty = 1) {
     const items = getCartItems();
-    const existingIndex = items.findIndex(item => 
-        item.id === productData.id || 
-        (item.name.toLowerCase() === productData.name.toLowerCase() && (item.size || 'Standard') === size)
+    const existingIndex = items.findIndex(item =>
+        (item.id && productData.id && String(item.id) === String(productData.id)) ||
+        (item.name && productData.name && item.name.toLowerCase() === productData.name.toLowerCase() && (item.size || 'Standard') === size)
     );
+
+    const priceNum = productData.priceNum || (typeof productData.price === 'number' ? productData.price : parseFloat(String(productData.price).replace(/[^0-9.]/g, '')) || 0);
 
     if (existingIndex > -1) {
         items[existingIndex].quantity = (parseInt(items[existingIndex].quantity) || 1) + qty;
+        if (!items[existingIndex].priceNum) items[existingIndex].priceNum = priceNum;
     } else {
         items.push({
             id: productData.id || ('prod_' + Date.now()),
             name: productData.name,
-            price: parseFloat(productData.price) || 0,
+            price: `₹${Math.round(priceNum).toLocaleString('en-IN')}`,
+            priceNum: priceNum,
             image: productData.image || '',
             category: productData.category || 'fashion',
             size: size,
@@ -91,10 +227,7 @@ function showToast(message) {
         toast = document.createElement('div');
         toast.id = 'toast';
         toast.className = 'toast-notification';
-        const isInSubDir = window.location.pathname.includes('/man category/') || 
-                           window.location.pathname.includes('/landingpage/') ||
-                           window.location.pathname.includes('/itempage/');
-        const checkoutUrl = isInSubDir ? '../../checkout/checkout.html' : './checkout/checkout.html';
+        const checkoutUrl = getAppRoot() + 'checkout/checkout.html';
         toast.innerHTML = `<i class='bx bx-check-circle'></i><span id="toastMessage"></span><a href="${checkoutUrl}">View Bag</a>`;
         document.body.appendChild(toast);
         toastMsg = document.getElementById('toastMessage');
@@ -109,14 +242,16 @@ function showToast(message) {
     }, 3500);
 }
 
-// ================= 2. AUTHENTICATION STATE =================
+// ================= 3. AUTHENTICATION STATE =================
 function initAuthState() {
     const user = JSON.parse(localStorage.getItem('currentUser') || localStorage.getItem('user') || 'null');
-    const userIcon = document.getElementById('userIcon');
+    const userIcons = document.querySelectorAll('#userIcon, .navbar .bx-user, .icon .bx-user');
 
-    if (userIcon) {
-        if (user && (user.username || user.email || user.name)) {
-            const displayName = user.username || user.first_name || user.email.split('@')[0];
+    userIcons.forEach(userIcon => {
+        userIcon.style.cursor = 'pointer';
+
+        if (user && (user.username || user.first_name || user.email || user.name)) {
+            const displayName = user.username || user.first_name || user.name || (user.email ? user.email.split('@')[0] : 'User');
             userIcon.title = `Signed in as ${displayName}`;
             userIcon.style.color = 'var(--accent-gold, #c5a059)';
 
@@ -131,19 +266,18 @@ function initAuthState() {
                 }
             };
         } else {
+            userIcon.title = 'Sign In / Register';
             userIcon.onclick = () => {
-                const isInSubDir = window.location.pathname.includes('/man category/') || 
-                                   window.location.pathname.includes('/landingpage/') ||
-                                   window.location.pathname.includes('/itempage/');
-                window.location.href = isInSubDir ? '../../signin/signin.html' : './signin/signin.html';
+                window.location.href = getAppRoot() + 'signin/signin.html';
             };
         }
-    }
+    });
 }
 
-// ================= 3. WISHLIST & BACK TO TOP =================
+// ================= 4. WISHLIST & BACK TO TOP =================
 function initWishlist() {
-    document.querySelectorAll('.bx-heart').forEach(icon => {
+    // Card Wishlist toggles
+    document.querySelectorAll('.cart-item .bx-heart').forEach(icon => {
         icon.style.cursor = 'pointer';
         icon.onclick = (e) => {
             e.stopPropagation();
@@ -151,6 +285,15 @@ function initWishlist() {
             icon.classList.toggle('bx-heart');
             icon.style.color = icon.classList.contains('bxs-heart') ? '#e53935' : '';
             showToast(icon.classList.contains('bxs-heart') ? 'Added to Wishlist' : 'Removed from Wishlist');
+        };
+    });
+
+    // Navbar Wishlist icon
+    document.querySelectorAll('.icon > .bx-heart, .navbar > .bx-heart').forEach(icon => {
+        icon.style.cursor = 'pointer';
+        icon.onclick = (e) => {
+            e.stopPropagation();
+            showToast('Wishlist feature active. Click the heart on any product to save items.');
         };
     });
 }
@@ -178,11 +321,11 @@ async function initCatalogGrid() {
     if (!container) return;
 
     const category = container.getAttribute('data-category') || 'all';
-    
+
     // 1. Get products from centralized data store
-    let products = typeof window.getProductsByCategory === 'function' ? 
-                   window.getProductsByCategory(category) : 
-                   (window.NOVA_PRODUCTS || []);
+    let products = typeof window.getProductsByCategory === 'function' ?
+        window.getProductsByCategory(category) :
+        (window.NOVA_PRODUCTS || []);
 
     // 2. Try fetching from Django REST API if available
     try {
@@ -278,11 +421,7 @@ function renderProducts(container, products) {
         card.onclick = (e) => {
             if (e.target.closest('.shopadd') || e.target.closest('.bx-heart')) return;
             localStorage.setItem('selectedProduct', JSON.stringify(product));
-            const isInSubDir = window.location.pathname.includes('/man category/') || 
-                               window.location.pathname.includes('/landingpage/');
-            const itemUrl = isInSubDir ? 
-                            `../../itempage/item.html?id=${encodeURIComponent(product.id)}&name=${encodeURIComponent(product.name)}` : 
-                            `./itempage/item.html?id=${encodeURIComponent(product.id)}&name=${encodeURIComponent(product.name)}`;
+            const itemUrl = `${getAppRoot()}itempage/item.html?id=${encodeURIComponent(product.id)}&name=${encodeURIComponent(product.name)}`;
             window.location.href = itemUrl;
         };
     });
@@ -306,7 +445,7 @@ function initSortingAndSearch(container, initialProducts) {
         let filtered = [...initialProducts];
 
         if (query) {
-            filtered = filtered.filter(p => 
+            filtered = filtered.filter(p =>
                 (p.name && p.name.toLowerCase().includes(query)) ||
                 (p.category && p.category.toLowerCase().includes(query)) ||
                 (p.badge && p.badge.toLowerCase().includes(query))

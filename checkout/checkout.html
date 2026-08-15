@@ -261,27 +261,7 @@
                     <h3 class="summary-title">Order Summary</h3>
 
                     <div class="summary-items">
-                        <div class="summary-item">
-                            <div class="item-details">
-                                <p class="item-name">Brown Cotton Shirt</p>
-                                <p class="item-quantity">Qty: 1</p>
-                            </div>
-                            <p class="item-price">₹1,999</p>
-                        </div>
-                        <div class="summary-item">
-                            <div class="item-details">
-                                <p class="item-name">White Pleated Trousers</p>
-                                <p class="item-quantity">Qty: 1</p>
-                            </div>
-                            <p class="item-price">₹2,499</p>
-                        </div>
-                        <div class="summary-item">
-                            <div class="item-details">
-                                <p class="item-name">Cream Leather Bag</p>
-                                <p class="item-quantity">Qty: 1</p>
-                            </div>
-                            <p class="item-price">₹4,999</p>
-                        </div>
+                        <!-- Dynamic items inserted by checkout.js -->
                     </div>
 
                     <div class="summary-divider"></div>
@@ -289,7 +269,7 @@
                     <div class="summary-breakdown">
                         <div class="breakdown-row">
                             <span>Subtotal</span>
-                            <span id="subtotalPrice">₹9,497</span>
+                            <span id="subtotalPrice">₹0</span>
                         </div>
                         <div class="breakdown-row">
                             <span>Shipping</span>
@@ -297,7 +277,7 @@
                         </div>
                         <div class="breakdown-row">
                             <span>Tax (18%)</span>
-                            <span id="taxPrice">₹1,710</span>
+                            <span id="taxPrice">₹0</span>
                         </div>
                     </div>
 
@@ -310,7 +290,7 @@
 
                     <div class="summary-total">
                         <span>Total</span>
-                        <span id="totalPrice" class="total-amount">₹11,207</span>
+                        <span id="totalPrice" class="total-amount">₹0</span>
                     </div>
 
                     <button class="btn btn-success btn-block" id="summaryOrderBtn" onclick="placeOrder()">

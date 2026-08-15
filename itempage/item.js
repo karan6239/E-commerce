@@ -199,21 +199,33 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function addToCart(product, size, qty) {
-        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        let cartItems = [];
+        try {
+            const stored = localStorage.getItem('cartItems') || localStorage.getItem('nova_cart');
+            cartItems = stored ? JSON.parse(stored) : [];
+            if (!Array.isArray(cartItems)) cartItems = [];
+        } catch (e) {
+            cartItems = [];
+        }
+
         const priceNum = product.priceNum || (typeof product.price === 'number' ? product.price : parseFloat(String(product.price).replace(/[^0-9.]/g, '')) || 0);
 
-        // Find existing match by id and size
-        const existingIdx = cartItems.findIndex(item => item.id === product.id && item.size === size);
+        // Find existing match by id or name and size
+        const existingIdx = cartItems.findIndex(item => 
+            ((item.id && product.id && String(item.id) === String(product.id)) || (item.name && product.name && item.name.toLowerCase() === product.name.toLowerCase())) &&
+            (item.size === size || (!item.size && size === 'M'))
+        );
 
         if (existingIdx > -1) {
-            cartItems[existingIdx].quantity += qty;
+            cartItems[existingIdx].quantity = (parseInt(cartItems[existingIdx].quantity) || 1) + qty;
+            if (!cartItems[existingIdx].priceNum) cartItems[existingIdx].priceNum = priceNum;
         } else {
             cartItems.push({
-                id: product.id || Date.now(),
+                id: product.id || ('item_' + Date.now()),
                 name: product.name,
-                price: `₹${Math.round(priceNum).toLocaleString()}`,
+                price: `₹${Math.round(priceNum).toLocaleString('en-IN')}`,
                 priceNum: priceNum,
-                image: product.image,
+                image: product.image || '',
                 category: product.category || '',
                 size: size,
                 quantity: qty
@@ -221,16 +233,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        localStorage.setItem('nova_cart', JSON.stringify(cartItems));
         initCartCount();
     }
 
     function initCartCount() {
-        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        let cartItems = [];
+        try {
+            const stored = localStorage.getItem('cartItems') || localStorage.getItem('nova_cart');
+            cartItems = stored ? JSON.parse(stored) : [];
+        } catch (e) {}
+
         let totalCount = 0;
         if (cartItems.length > 0) {
-            totalCount = cartItems.reduce((acc, item) => acc + (item.quantity || 1), 0);
+            totalCount = cartItems.reduce((acc, item) => acc + (parseInt(item.quantity) || 1), 0);
         } else {
-            totalCount = parseInt(localStorage.getItem('cartCount') || '0');
+            totalCount = parseInt(localStorage.getItem('cartCount') || '0') || 0;
         }
         localStorage.setItem('cartCount', totalCount);
 
@@ -281,6 +299,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 } else {
                     window.location.href = '../signin/signin.html';
                 }
+            });
+        }
+
+        const navWishlist = document.getElementById('navWishlist');
+        if (navWishlist) {
+            navWishlist.addEventListener('click', () => {
+                showToast('Wishlist feature active. Click "Save to Wishlist" below to bookmark this item.');
             });
         }
     }

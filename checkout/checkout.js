@@ -113,8 +113,26 @@ function isValidZip(zip) {
 }
 
 // ================= DYNAMIC CART & SUMMARY =================
+function getItemPrice(item) {
+    if (!item) return 0;
+    if (typeof item.priceNum === 'number' && !isNaN(item.priceNum)) return item.priceNum;
+    if (typeof item.price === 'number' && !isNaN(item.price)) return item.price;
+    if (typeof item.price === 'string') {
+        const parsed = parseFloat(item.price.replace(/[^0-9.]/g, ''));
+        return isNaN(parsed) ? 0 : parsed;
+    }
+    return 0;
+}
+
 function loadCartItems() {
-    cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    try {
+        const stored = localStorage.getItem('cartItems') || localStorage.getItem('nova_cart');
+        cartItems = stored ? JSON.parse(stored) : [];
+        if (!Array.isArray(cartItems)) cartItems = [];
+    } catch (e) {
+        console.error('Error reading cart from localStorage:', e);
+        cartItems = [];
+    }
     renderCartSummary();
 }
 
@@ -126,8 +144,8 @@ function renderCartSummary() {
         summaryContainer.innerHTML = `
             <div style="padding: 24px 0; text-align: center; color: #6b7280;">
                 <i class='bx bx-shopping-bag' style='font-size: 40px; color: #d1d5db;'></i>
-                <p style="margin-top: 10px; font-weight: 500;">Your cart is currently empty</p>
-                <a href="../man category/man.html" style="display: inline-block; margin-top: 12px; color: #111; font-weight: 600; text-decoration: underline; font-size: 13px;">Browse Collection &rarr;</a>
+                <p style="margin-top: 10px; font-weight: 500; font-size: 14px;">Your cart is currently empty</p>
+                <a href="../landingpage/landing.html" style="display: inline-block; margin-top: 12px; color: #111; font-weight: 600; text-decoration: underline; font-size: 13px;">Browse Collection &rarr;</a>
             </div>
         `;
         disablePlaceOrderButtons(true);
@@ -143,24 +161,26 @@ function renderCartSummary() {
         itemDiv.className = 'summary-item';
         itemDiv.style.cssText = 'display: flex; gap: 12px; align-items: center; padding-bottom: 14px; border-bottom: 1px solid #f3f4f6;';
 
-        const priceNum = item.priceNum || (typeof item.price === 'number' ? item.price : parseFloat(String(item.price).replace(/[^0-9.]/g, '')) || 0);
-        const itemTotal = priceNum * (item.quantity || 1);
+        const priceNum = getItemPrice(item);
+        const qty = parseInt(item.quantity) || 1;
+        const itemTotal = priceNum * qty;
+        const imgSrc = item.image || 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=200';
 
         itemDiv.innerHTML = `
-            <img src="${item.image || 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=200'}" alt="${item.name}" style="width: 52px; height: 52px; object-fit: cover; border-radius: 8px; background: #f9fafb;">
-            <div class="item-details" style="flex: 1;">
-                <p class="item-name" style="font-weight: 600; font-size: 13px; color: #111827; margin: 0;">${item.name}</p>
+            <img src="${imgSrc}" alt="${item.name || 'Product'}" style="width: 52px; height: 52px; object-fit: cover; border-radius: 8px; background: #f9fafb;" onerror="this.src='https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=200'">
+            <div class="item-details" style="flex: 1; min-width: 0;">
+                <p class="item-name" style="font-weight: 600; font-size: 13px; color: #111827; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${item.name || 'Fashion Item'}">${item.name || 'Fashion Item'}</p>
                 <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
-                    ${item.size ? `<span style="font-size: 11px; background: #f3f4f6; padding: 2px 6px; border-radius: 4px; color: #4b5563;">Size: ${item.size}</span>` : ''}
+                    ${item.size ? `<span style="font-size: 11px; background: #f3f4f6; padding: 2px 6px; border-radius: 4px; color: #4b5563; font-weight: 500;">Size: ${item.size}</span>` : ''}
                     <div style="display: inline-flex; align-items: center; border: 1px solid #e5e7eb; border-radius: 4px; overflow: hidden; background: #fff;">
-                        <button type="button" onclick="updateItemQuantity(${index}, -1)" style="border:none; background:transparent; padding: 2px 6px; cursor: pointer; font-size: 12px;">-</button>
-                        <span style="font-size: 12px; padding: 0 4px; min-width: 16px; text-align: center; font-weight: 600;">${item.quantity || 1}</span>
-                        <button type="button" onclick="updateItemQuantity(${index}, 1)" style="border:none; background:transparent; padding: 2px 6px; cursor: pointer; font-size: 12px;">+</button>
+                        <button type="button" onclick="updateItemQuantity(${index}, -1)" style="border:none; background:transparent; padding: 2px 6px; cursor: pointer; font-size: 12px; font-weight: 700; color: #374151;">-</button>
+                        <span style="font-size: 12px; padding: 0 4px; min-width: 16px; text-align: center; font-weight: 600; color: #111;">${qty}</span>
+                        <button type="button" onclick="updateItemQuantity(${index}, 1)" style="border:none; background:transparent; padding: 2px 6px; cursor: pointer; font-size: 12px; font-weight: 700; color: #374151;">+</button>
                     </div>
                 </div>
             </div>
-            <div style="text-align: right;">
-                <p class="item-price" style="font-weight: 600; font-size: 14px; color: #111; margin: 0;">₹${Math.round(itemTotal).toLocaleString()}</p>
+            <div style="text-align: right; margin-left: auto;">
+                <p class="item-price" style="font-weight: 600; font-size: 14px; color: #111; margin: 0;">₹${Math.round(itemTotal).toLocaleString('en-IN')}</p>
                 <button type="button" onclick="removeItem(${index})" title="Remove item" style="border: none; background: transparent; color: #9ca3af; cursor: pointer; font-size: 14px; margin-top: 4px; transition: color 0.2s;" onmouseover="this.style.color='#e63946'" onmouseout="this.style.color='#9ca3af'">
                     <i class='bx bx-trash'></i>
                 </button>
@@ -175,9 +195,12 @@ function renderCartSummary() {
 
 function updateItemQuantity(index, delta) {
     if (!cartItems[index]) return;
-    cartItems[index].quantity = (cartItems[index].quantity || 1) + delta;
-    if (cartItems[index].quantity <= 0) {
+    const currentQty = parseInt(cartItems[index].quantity) || 1;
+    const newQty = currentQty + delta;
+    if (newQty <= 0) {
         cartItems.splice(index, 1);
+    } else {
+        cartItems[index].quantity = newQty;
     }
     saveCart();
     renderCartSummary();
@@ -192,7 +215,8 @@ function removeItem(index) {
 
 function saveCart() {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    const totalCount = cartItems.reduce((acc, item) => acc + (item.quantity || 1), 0);
+    localStorage.setItem('nova_cart', JSON.stringify(cartItems));
+    const totalCount = cartItems.reduce((acc, item) => acc + (parseInt(item.quantity) || 1), 0);
     localStorage.setItem('cartCount', totalCount);
 }
 
@@ -243,8 +267,8 @@ function getShippingCost() {
 function updateTotals() {
     let subtotal = 0;
     cartItems.forEach(item => {
-        const priceNum = item.priceNum || (typeof item.price === 'number' ? item.price : parseFloat(String(item.price).replace(/[^0-9.]/g, '')) || 0);
-        subtotal += priceNum * (item.quantity || 1);
+        const priceNum = getItemPrice(item);
+        subtotal += priceNum * (parseInt(item.quantity) || 1);
     });
 
     const shippingCost = cartItems.length > 0 ? getShippingCost() : 0;
@@ -257,7 +281,7 @@ function updateTotals() {
 
     const taxableSubtotal = Math.max(0, subtotal - discountAmount);
     const tax = Math.round(taxableSubtotal * taxRate);
-    const total = taxableSubtotal + shippingCost + tax;
+    const total = cartItems.length > 0 ? (taxableSubtotal + shippingCost + tax) : 0;
 
     // Update displays
     const subtotalEl = document.getElementById('subtotalPrice');
@@ -266,14 +290,14 @@ function updateTotals() {
 
     if (subtotalEl) {
         if (discountAmount > 0) {
-            subtotalEl.innerHTML = `<span>₹${subtotal.toLocaleString()}</span> <small style="color:#10b981; font-weight:600;">(-₹${discountAmount.toLocaleString()})</small>`;
+            subtotalEl.innerHTML = `<span>₹${subtotal.toLocaleString('en-IN')}</span> <small style="color:#10b981; font-weight:600;">(-₹${discountAmount.toLocaleString('en-IN')})</small>`;
         } else {
-            subtotalEl.textContent = '₹' + subtotal.toLocaleString();
+            subtotalEl.textContent = '₹' + subtotal.toLocaleString('en-IN');
         }
     }
 
-    if (taxEl) taxEl.textContent = '₹' + tax.toLocaleString();
-    if (totalEl) totalEl.textContent = '₹' + total.toLocaleString();
+    if (taxEl) taxEl.textContent = '₹' + tax.toLocaleString('en-IN');
+    if (totalEl) totalEl.textContent = '₹' + total.toLocaleString('en-IN');
 
     return {
         subtotal,
@@ -597,4 +621,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // 5. Pre-fill user data & load cart
     prefillUserData();
     loadCartItems();
+
+    // 6. Listen for cart changes from other tabs/windows
+    window.addEventListener('storage', function(e) {
+        if (e.key === 'cartItems' || e.key === 'nova_cart') {
+            loadCartItems();
+        }
+    });
 });
