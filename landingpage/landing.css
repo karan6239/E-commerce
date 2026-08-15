@@ -13,7 +13,7 @@
     grid-template-rows: repeat(5, 1fr);
     gap: 8px;
     background-color: #f0f0f0;
-    background-image: url(../img/newbg.jpg");
+    background-image: url("../img/newbg.jpg");
     background-position: left;
     background-size: contain;
     width: 100%;
