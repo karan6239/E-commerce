@@ -103,17 +103,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             searchDebounceTimer = setTimeout(async () => {
+                let products = [];
                 try {
                     const res = await fetch(`http://localhost:8000/api/products/?search=${encodeURIComponent(query)}`);
                     if (res.ok) {
-                        const products = await res.json();
-                        renderSearchResults(products, query);
+                        products = await res.json();
                     }
                 } catch (err) {
-                    console.warn("Search query API offline, showing category matches:", err);
-                    renderSearchResults([], query);
+                    // Backend offline
                 }
-            }, 300);
+
+                if ((!products || products.length === 0) && typeof window.searchProducts === 'function') {
+                    products = window.searchProducts(query);
+                }
+
+                renderSearchResults(products, query);
+            }, 250);
         });
     }
 

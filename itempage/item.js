@@ -17,6 +17,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
 
+        // 1. Try centralized products data store
+        if (productId && typeof window.getProductById === 'function') {
+            const found = window.getProductById(productId);
+            if (found) {
+                currentProduct = found;
+                renderProduct(currentProduct);
+                return;
+            }
+        }
+
+        // 2. Try Django Backend API if running
         if (productId) {
             try {
                 const response = await fetch(`http://localhost:8000/api/products/${productId}/`);
@@ -26,22 +37,31 @@ document.addEventListener('DOMContentLoaded', async () => {
                     return;
                 }
             } catch (err) {
-                console.warn('Could not fetch product from backend API, checking localStorage:', err);
+                // API offline, fallback
             }
         }
 
-        // Fallback to localStorage selectedProducts
-        const storedProducts = JSON.parse(localStorage.getItem('selectedProducts')) || [];
+        // 3. Fallback to localStorage selectedProduct
+        const singleSelected = JSON.parse(localStorage.getItem('selectedProduct') || 'null');
+        if (singleSelected) {
+            currentProduct = singleSelected;
+            renderProduct(currentProduct);
+            return;
+        }
+
+        const storedProducts = JSON.parse(localStorage.getItem('selectedProducts') || '[]');
         if (storedProducts.length > 0) {
             currentProduct = storedProducts[storedProducts.length - 1];
             renderProduct(currentProduct);
+        } else if (typeof window.getAllProducts === 'function') {
+            currentProduct = window.getAllProducts()[0];
+            renderProduct(currentProduct);
         } else {
-            // Default demo product if opened directly
+            // Default demo product
             currentProduct = {
-                id: 1,
+                id: 'shirts_1',
                 name: 'Cotton Shirt Solid Brown',
-                price: '₹1,999',
-                priceNum: 1999,
+                price: 1999,
                 category: 'shirts',
                 image: 'https://i.pinimg.com/736x/1a/81/12/1a8112a55105cf0a636eea0f16bee1d4.jpg',
                 description: 'Crafted from 100% breathable pure cotton, this solid brown shirt offers timeless casual elegance and all-day comfort.',
