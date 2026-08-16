@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="referrer" content="no-referrer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Money & Quiet Luxury Collection – NOVA Luxury</title>
+    <meta name="description" content="Discover Australian merino cable knits, forward-pleat tailored trousers, double-breasted camel blazers, and heritage polos by NOVA.">
+    <link rel="stylesheet" href="oldmoney.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        🏛️ QUIET LUXURY 2026: COMPLIMENTARY EXPRESS SHIPPING OVER ₹2,999 <span>• CODE: HERITAGE26</span>
+    </div>
+
+    <!-- Glassmorphic Header -->
+    <header>
+        <div class="parent">
+            <div class="navbar">
+                <div class="logo">
+                    <a id="logo" href="../../landingpage/landing.html">NOVA</a>
+                </div>
+                
+                <div class="icon">
+                    <div id="searchinput">
+                        <input type="search" placeholder="Search old money collection..." id="searchi">
+                        <button id="searchbtn">Search</button>
+                    </div>
+                    
+                    <i class='bx bx-search search-icon' title="Search collection"></i>
+                    <i class='bx bx-heart' title="Wishlist"></i>
+                    <i class='bx bx-shopping-bag' title="Shopping Bag"><span id="cartCount"></span></i>
+                    <i class='bx bx-user' id="userIcon" title="Account"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Editorial Category Hero -->
+    <section class="category-hero">
+        <span class="sub-heading"><i class='bx bx-crown'></i> Quiet Luxury 2026</span>
+        <h1>Old Money & Heritage Capsule</h1>
+        <p>Timeless aristocratic aesthetics. Spun from pure merino wool, cashmere blends, forward-pleated tailoring, and understated bespoke silhouettes.</p>
+        
+        <div class="season-highlights">
+            <div class="highlight-pill"><i class='bx bx-feather'></i> 100% Australian Merino</div>
+            <div class="highlight-pill"><i class='bx bx-diamond'></i> Forward-Pleated Tailoring</div>
+            <div class="highlight-pill"><i class='bx bx-award'></i> Camel Hair Blends</div>
+        </div>
+    </section>
+
+    <!-- Category Switcher Pills -->
+    <nav class="cat-btn">
+        <a href="../../collections/linen/linen.html"><button class="catbtn">Linen Fabric</button></a>
+        <a href="../../collections/streetwear/streetwear.html"><button class="catbtn">Streetwear</button></a>
+        <a href="../../collections/utility/utility.html"><button class="catbtn">Utility</button></a>
+        <a href="../../collections/oldmoney/oldmoney.html"><button class="catbtn active-cat">Old Money</button></a>
+        <a href="../../collections/office/office.html"><button class="catbtn">Office</button></a>
+        <a href="../../collections/party/party.html"><button class="catbtn">Party</button></a>
+        <a href="../../collections/gym/gym.html"><button class="catbtn">Gym</button></a>
+        <a href="../../collections/beach/beach.html"><button class="catbtn">Beach</button></a>
+    </nav>
+
+    <!-- Sub-Category Filter Buttons -->
+    <div class="subfilter-container">
+        <button class="subfilter-btn active" data-subfilter="all">All Heritage Styles</button>
+        <button class="subfilter-btn" data-subfilter="knits">Cable Knits & Sweaters</button>
+        <button class="subfilter-btn" data-subfilter="pants">Tailored Trousers</button>
+        <button class="subfilter-btn" data-subfilter="polos">Heritage Polos</button>
+        <button class="subfilter-btn" data-subfilter="blazers">Wool Blazers</button>
+    </div>
+
+    <!-- Controls Toolbar -->
+    <div class="toolbar-container">
+        <div class="toolbar-count">
+            Showing <b>Old Money Collection</b>
+        </div>
+        <div class="toolbar-sort">
+            <label for="sortSelect">Sort By</label>
+            <select id="sortSelect">
+                <option value="featured">Featured Collection</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Customer Rated</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Product Grid for Old Money Collection -->
+    <main class="item-shop" data-category="oldmoney">
+        <!-- Card 1 -->
+        <article class="cart-item" data-id="oldmoney_1" data-category="knits" data-price="3999" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">100% MERINO</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=800&auto=format&fit=crop&q=80" alt="Australian Merino Cable-Knit Sweater" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">CABLE KNIT</span>
+                <p>Australian Merino Cable-Knit Sweater</p>
+                <div class="star-rating">★★★★★ <span>4.9 (127)</span></div>
+                <div class="price-section">
+                    <b>₹3,999</b>
+                    <span class="original-price">₹5,299</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="cart-item" data-id="oldmoney_2" data-category="pants" data-price="3499" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">FORWARD PLEAT</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop&q=80" alt="Forward-Pleat Tailored Wool Trousers" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">TROUSERS</span>
+                <p>Forward-Pleat Tailored Wool Trousers</p>
+                <div class="star-rating">★★★★★ <span>4.8 (89)</span></div>
+                <div class="price-section">
+                    <b>₹3,499</b>
+                    <span class="original-price">₹4,599</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="cart-item" data-id="oldmoney_3" data-category="blazers" data-price="7499" data-rating="5.0">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">CAMEL HAIR BLEND</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&auto=format&fit=crop&q=80" alt="Camel Hair Double-Breasted Blazer" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">BLAZER</span>
+                <p>Camel Hair Double-Breasted Blazer</p>
+                <div class="star-rating">★★★★★ <span>5.0 (94)</span></div>
+                <div class="price-section">
+                    <b>₹7,499</b>
+                    <span class="original-price">₹9,999</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="cart-item" data-id="oldmoney_4" data-category="polos" data-price="2499" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">EGYPTIAN PIQUE</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1625910513413-562a9bd65cb5?w=800&auto=format&fit=crop&q=80" alt="Pique Cotton Heritage Tennis Polo" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">POLO SHIRTS</span>
+                <p>Pique Cotton Heritage Tennis Polo</p>
+                <div class="star-rating">★★★★★ <span>4.7 (76)</span></div>
+                <div class="price-section">
+                    <b>₹2,499</b>
+                    <span class="original-price">₹3,299</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="cart-item" data-id="oldmoney_5" data-category="knits" data-price="4799" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">CASHMERE SILK</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&auto=format&fit=crop&q=80" alt="Cashmere-Silk Blend Quarter-Zip" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">KNITWEAR</span>
+                <p>Cashmere-Silk Blend Quarter-Zip</p>
+                <div class="star-rating">★★★★★ <span>4.9 (68)</span></div>
+                <div class="price-section">
+                    <b>₹4,799</b>
+                    <span class="original-price">₹6,299</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="cart-item" data-id="oldmoney_6" data-category="blazers" data-price="6999" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">HOUNDSTOOTH TWEED</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80" alt="Houndstooth Tailored Tweed Jacket" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">TWEED JACKET</span>
+                <p>Houndstooth Tailored Tweed Jacket</p>
+                <div class="star-rating">★★★★★ <span>4.8 (52)</span></div>
+                <div class="price-section">
+                    <b>₹6,999</b>
+                    <span class="original-price">₹9,199</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="cart-item" data-id="oldmoney_7" data-category="pants" data-price="3299" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">GURKHA WAISTBAND</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80" alt="British Gurkha High-Waisted Chinos" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">GURKHA CHINOS</span>
+                <p>British Gurkha High-Waisted Chinos</p>
+                <div class="star-rating">★★★★★ <span>4.8 (81)</span></div>
+                <div class="price-section">
+                    <b>₹3,299</b>
+                    <span class="original-price">₹4,299</span>
+                    <span class="discount-tag">23% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="cart-item" data-id="oldmoney_8" data-category="polos" data-price="5999" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">CALFSKIN SUEDE</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=800&auto=format&fit=crop&q=80" alt="Belgian Calfskin Suede Loafers" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">FOOTWEAR</span>
+                <p>Belgian Calfskin Suede Loafers</p>
+                <div class="star-rating">★★★★★ <span>4.9 (63)</span></div>
+                <div class="price-section">
+                    <b>₹5,999</b>
+                    <span class="original-price">₹7,999</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+    </main>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-crown'></i></div>
+                <div class="trust-text">
+                    <h4>Merino & Cashmere</h4>
+                    <p>Finest Grade-A natural fibers</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-package'></i></div>
+                <div class="trust-text">
+                    <h4>Express Delivery</h4>
+                    <p>Complimentary on orders ₹2,999+</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-refresh'></i></div>
+                <div class="trust-text">
+                    <h4>Hassle-Free Exchanges</h4>
+                    <p>30-Day doorstep exchanges</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-shield-quarter'></i></div>
+                <div class="trust-text">
+                    <h4>Secure Checkout</h4>
+                    <p>256-Bit SSL encrypted payments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Luxury Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">NOVA</div>
+                <p>Old money heritage fashion, cashmere knits, double-breasted camel tailoring, and understated quiet luxury essentials for refined connoisseurs.</p>
+                <div class="socials">
+                    <i class='bx bxl-instagram' title="Instagram"></i>
+                    <i class='bx bxl-facebook' title="Facebook"></i>
+                    <i class='bx bxl-twitter' title="Twitter"></i>
+                    <i class='bx bxl-pinterest' title="Pinterest"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="../../collections/linen/linen.html">Linen Fabric</a></li>
+                    <li><a href="../../collections/streetwear/streetwear.html">Streetwear</a></li>
+                    <li><a href="../../collections/utility/utility.html">Utility Jackets</a></li>
+                    <li><a href="../../collections/oldmoney/oldmoney.html">Old Money</a></li>
+                    <li><a href="../../collections/office/office.html">Office Wear</a></li>
+                    <li><a href="../../collections/party/party.html">Party Wear</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Client Care</h4>
+                <ul>
+                    <li><a href="#">Contact Atelier</a></li>
+                    <li><a href="#">Shipping & Duties</a></li>
+                    <li><a href="#">Cashmere Care Guide</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Size & Fit Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>The Insider Club</h4>
+                <p>Receive private collection previews, private sales, and exclusive invitations.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="button">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 NOVA Luxury Fashion Inc. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification">
+        <i class='bx bx-check-circle'></i>
+        <span id="toastMessage">Item added to your shopping bag.</span>
+        <a href="../../checkout/checkout.html">View Bag</a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="topBtn" aria-label="Back to top"><i class='bx bx-chevron-up'></i></button>
+
+    <!-- Centralized Data Store & Client Script -->
+    <script src="../../data/products.js"></script>
+    <script src="../../js/catalog-renderer.js"></script>
+    <script src="oldmoney.js"></script>
+</body>
+
+</html>

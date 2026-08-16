@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="referrer" content="no-referrer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coastal Beach & Resort Collection – NOVA Luxury</title>
+    <meta name="description" content="Discover quick-dry Mediterranean print swim shorts, Hawaiian floral camp collar shirts, Aegean open-stitch crochet tops, and beach footwear by NOVA.">
+    <link rel="stylesheet" href="beach.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        🌊 COASTAL RESORT 2026: COMPLIMENTARY EXPRESS SHIPPING OVER ₹2,999 <span>• CODE: BEACH26</span>
+    </div>
+
+    <!-- Glassmorphic Header -->
+    <header>
+        <div class="parent">
+            <div class="navbar">
+                <div class="logo">
+                    <a id="logo" href="../../landingpage/landing.html">NOVA</a>
+                </div>
+                
+                <div class="icon">
+                    <div id="searchinput">
+                        <input type="search" placeholder="Search beach collection..." id="searchi">
+                        <button id="searchbtn">Search</button>
+                    </div>
+                    
+                    <i class='bx bx-search search-icon' title="Search collection"></i>
+                    <i class='bx bx-heart' title="Wishlist"></i>
+                    <i class='bx bx-shopping-bag' title="Shopping Bag"><span id="cartCount"></span></i>
+                    <i class='bx bx-user' id="userIcon" title="Account"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Editorial Category Hero -->
+    <section class="category-hero">
+        <span class="sub-heading"><i class='bx bx-water'></i> Coastal Breeze 2026</span>
+        <h1>Beach & Coastal Resort</h1>
+        <p>Bask under the Mediterranean sun. Quick-dry micro-poly swim shorts, breezy camp-collar resort shirts, open-knit crochet weaves, and coastal essentials.</p>
+        
+        <div class="season-highlights">
+            <div class="highlight-pill"><i class='bx bx-droplet'></i> Hydro-Fast Quick-Dry</div>
+            <div class="highlight-pill"><i class='bx bx-sun'></i> UPF 50+ UV Guard</div>
+            <div class="highlight-pill"><i class='bx bx-wind'></i> Ultra-Light Air-Weave</div>
+        </div>
+    </section>
+
+    <!-- Category Switcher Pills -->
+    <nav class="cat-btn">
+        <a href="../../collections/linen/linen.html"><button class="catbtn">Linen Fabric</button></a>
+        <a href="../../collections/streetwear/streetwear.html"><button class="catbtn">Streetwear</button></a>
+        <a href="../../collections/utility/utility.html"><button class="catbtn">Utility</button></a>
+        <a href="../../collections/oldmoney/oldmoney.html"><button class="catbtn">Old Money</button></a>
+        <a href="../../collections/office/office.html"><button class="catbtn">Office</button></a>
+        <a href="../../collections/party/party.html"><button class="catbtn">Party</button></a>
+        <a href="../../collections/gym/gym.html"><button class="catbtn">Gym</button></a>
+        <a href="../../collections/beach/beach.html"><button class="catbtn active-cat">Beach</button></a>
+    </nav>
+
+    <!-- Sub-Category Filter Buttons -->
+    <div class="subfilter-container">
+        <button class="subfilter-btn active" data-subfilter="all">All Beach Styles</button>
+        <button class="subfilter-btn" data-subfilter="swim">Swim Shorts</button>
+        <button class="subfilter-btn" data-subfilter="shirts">Camp & Floral Shirts</button>
+        <button class="subfilter-btn" data-subfilter="crochet">Crochet & Tees</button>
+        <button class="subfilter-btn" data-subfilter="accessories">Beach Footwear & Hats</button>
+    </div>
+
+    <!-- Controls Toolbar -->
+    <div class="toolbar-container">
+        <div class="toolbar-count">
+            Showing <b>Beach & Resort Collection</b>
+        </div>
+        <div class="toolbar-sort">
+            <label for="sortSelect">Sort By</label>
+            <select id="sortSelect">
+                <option value="featured">Featured Collection</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Customer Rated</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Product Grid for Beach Collection -->
+    <main class="item-shop" data-category="beach">
+        <!-- Card 1 -->
+        <article class="cart-item" data-id="beach_1" data-category="swim" data-price="1799" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">HYDRO-FAST</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="../img/beachj.jpg" alt="Quick-Dry Mediterranean Print Swim Shorts" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">SWIM SHORTS</span>
+                <p>Quick-Dry Mediterranean Print Swim Shorts</p>
+                <div class="star-rating">★★★★★ <span>4.9 (138)</span></div>
+                <div class="price-section">
+                    <b>₹1,799</b>
+                    <span class="original-price">₹2,399</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="cart-item" data-id="beach_2" data-category="shirts" data-price="2199" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">HAWAIIAN SILK</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80" alt="Hawaiian Floral Camp Collar Shirt" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">CAMP SHIRTS</span>
+                <p>Hawaiian Floral Camp Collar Shirt</p>
+                <div class="star-rating">★★★★★ <span>4.8 (95)</span></div>
+                <div class="price-section">
+                    <b>₹2,199</b>
+                    <span class="original-price">₹2,899</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="cart-item" data-id="beach_3" data-category="crochet" data-price="2699" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">OPEN-STITCH CROCHET</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop&q=80" alt="Aegean Sea Open-Stitch Crochet Beach Shirt" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">CROCHET TOPS</span>
+                <p>Aegean Sea Open-Stitch Crochet Beach Shirt</p>
+                <div class="star-rating">★★★★★ <span>4.9 (82)</span></div>
+                <div class="price-section">
+                    <b>₹2,699</b>
+                    <span class="original-price">₹3,599</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="cart-item" data-id="beach_4" data-category="swim" data-price="1899" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">PURE LINEN</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=800&auto=format&fit=crop&q=80" alt="Drawstring Linen Coastal Beach Shorts" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">BEACH SHORTS</span>
+                <p>Drawstring Linen Coastal Beach Shorts</p>
+                <div class="star-rating">★★★★★ <span>4.7 (74)</span></div>
+                <div class="price-section">
+                    <b>₹1,899</b>
+                    <span class="original-price">₹2,499</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="cart-item" data-id="beach_5" data-category="crochet" data-price="1299" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">160 GSM SLUB</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80" alt="Sun-Washed Slub Cotton Surf Tee" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">SURF TEES</span>
+                <p>Sun-Washed Slub Cotton Surf Tee</p>
+                <div class="star-rating">★★★★★ <span>4.8 (104)</span></div>
+                <div class="price-section">
+                    <b>₹1,299</b>
+                    <span class="original-price">₹1,699</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="cart-item" data-id="beach_6" data-category="swim" data-price="1999" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">4-WAY STRETCH BOARD</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&auto=format&fit=crop&q=80" alt="Wave Pattern Quick-Dry Boardshorts" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">BOARDSHORTS</span>
+                <p>Wave Pattern Quick-Dry Boardshorts</p>
+                <div class="star-rating">★★★★★ <span>4.8 (69)</span></div>
+                <div class="price-section">
+                    <b>₹1,999</b>
+                    <span class="original-price">₹2,699</span>
+                    <span class="discount-tag">26% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="cart-item" data-id="beach_7" data-category="accessories" data-price="1499" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">HANDWOVEN PALM</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80" alt="Woven Palm Straw Beach Sun Hat" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">ACCESSORIES</span>
+                <p>Woven Palm Straw Beach Sun Hat</p>
+                <div class="star-rating">★★★★★ <span>4.7 (51)</span></div>
+                <div class="price-section">
+                    <b>₹1,499</b>
+                    <span class="original-price">₹1,999</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="cart-item" data-id="beach_8" data-category="accessories" data-price="2499" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">SAND SUEDE</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&auto=format&fit=crop&q=80" alt="Water-Resistant Sand Suede Beach Slides" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">FOOTWEAR</span>
+                <p>Water-Resistant Sand Suede Beach Slides</p>
+                <div class="star-rating">★★★★★ <span>4.9 (88)</span></div>
+                <div class="price-section">
+                    <b>₹2,499</b>
+                    <span class="original-price">₹3,299</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+    </main>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-crown'></i></div>
+                <div class="trust-text">
+                    <h4>Hydro-Fast Tech</h4>
+                    <p>Micro-poly quick-drying fabric</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-package'></i></div>
+                <div class="trust-text">
+                    <h4>Express Delivery</h4>
+                    <p>Complimentary on orders ₹2,999+</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-refresh'></i></div>
+                <div class="trust-text">
+                    <h4>Hassle-Free Exchanges</h4>
+                    <p>30-Day doorstep exchanges</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-shield-quarter'></i></div>
+                <div class="trust-text">
+                    <h4>Secure Checkout</h4>
+                    <p>256-Bit SSL encrypted payments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Luxury Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">NOVA</div>
+                <p>Coastal beachwear, quick-dry swim shorts, relaxed Hawaiian resort shirts, and sun-soaked vacation essentials designed for breezy shoreline living.</p>
+                <div class="socials">
+                    <i class='bx bxl-instagram' title="Instagram"></i>
+                    <i class='bx bxl-facebook' title="Facebook"></i>
+                    <i class='bx bxl-twitter' title="Twitter"></i>
+                    <i class='bx bxl-pinterest' title="Pinterest"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="../../collections/linen/linen.html">Linen Fabric</a></li>
+                    <li><a href="../../collections/streetwear/streetwear.html">Streetwear</a></li>
+                    <li><a href="../../collections/utility/utility.html">Utility Jackets</a></li>
+                    <li><a href="../../collections/oldmoney/oldmoney.html">Old Money</a></li>
+                    <li><a href="../../collections/office/office.html">Office Wear</a></li>
+                    <li><a href="../../collections/party/party.html">Party Wear</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Client Care</h4>
+                <ul>
+                    <li><a href="#">Contact Atelier</a></li>
+                    <li><a href="#">Shipping & Duties</a></li>
+                    <li><a href="#">Swimwear Care Guide</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Size & Fit Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>The Insider Club</h4>
+                <p>Receive private collection previews, private sales, and exclusive invitations.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="button">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 NOVA Luxury Fashion Inc. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification">
+        <i class='bx bx-check-circle'></i>
+        <span id="toastMessage">Item added to your shopping bag.</span>
+        <a href="../../checkout/checkout.html">View Bag</a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="topBtn" aria-label="Back to top"><i class='bx bx-chevron-up'></i></button>
+
+    <!-- Centralized Data Store & Client Script -->
+    <script src="../../data/products.js"></script>
+    <script src="../../js/catalog-renderer.js"></script>
+    <script src="beach.js"></script>
+</body>
+
+</html>

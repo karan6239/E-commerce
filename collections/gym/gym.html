@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="referrer" content="no-referrer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Gym & Athleisure Collection – NOVA Luxury</title>
+    <meta name="description"
+        content="Discover Aero-Vent Dry-Fit performance tees, 2-in-1 compression running shorts, 4-way stretch training joggers, and tech-fleece hoodies by NOVA.">
+    <link rel="stylesheet" href="gym.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        ⚡ PEAK ATHLETIC 2026: COMPLIMENTARY EXPRESS SHIPPING OVER ₹2,999 <span>• CODE: PERFORMANCE26</span>
+    </div>
+
+    <!-- Glassmorphic Header -->
+    <header>
+        <div class="parent">
+            <div class="navbar">
+                <div class="logo">
+                    <a id="logo" href="../../landingpage/landing.html">NOVA</a>
+                </div>
+
+                <div class="icon">
+                    <div id="searchinput">
+                        <input type="search" placeholder="Search gym collection..." id="searchi">
+                        <button id="searchbtn">Search</button>
+                    </div>
+
+                    <i class='bx bx-search search-icon' title="Search collection"></i>
+                    <i class='bx bx-heart' title="Wishlist"></i>
+                    <i class='bx bx-shopping-bag' title="Shopping Bag"><span id="cartCount"></span></i>
+                    <i class='bx bx-user' id="userIcon" title="Account"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Editorial Category Hero -->
+    <section class="category-hero">
+        <span class="sub-heading"><i class='bx bx-run'></i> Peak Training 2026</span>
+        <h1>Performance Gym & Athleisure</h1>
+        <p>Engineered for high-intensity training. 4-Way stretch moisture-wicking microfibers, targeted mesh
+            ventilation, and aerodynamic performance cuts.</p>
+
+        <div class="season-highlights">
+            <div class="highlight-pill"><i class='bx bx-water'></i> Aero-Vent Dry-Fit</div>
+            <div class="highlight-pill"><i class='bx bx-refresh'></i> 4-Way Hyper-Stretch</div>
+            <div class="highlight-pill"><i class='bx bx-wind'></i> Anti-Odor Ionic Tech</div>
+        </div>
+    </section>
+
+    <!-- Category Switcher Pills -->
+    <nav class="cat-btn">
+        <a href="../../collections/linen/linen.html"><button class="catbtn">Linen Fabric</button></a>
+        <a href="../../collections/streetwear/streetwear.html"><button class="catbtn">Streetwear</button></a>
+        <a href="../../collections/utility/utility.html"><button class="catbtn">Utility</button></a>
+        <a href="../../collections/oldmoney/oldmoney.html"><button class="catbtn">Old Money</button></a>
+        <a href="../../collections/office/office.html"><button class="catbtn">Office</button></a>
+        <a href="../../collections/party/party.html"><button class="catbtn">Party</button></a>
+        <a href="../../collections/gym/gym.html"><button class="catbtn active-cat">Gym</button></a>
+        <a href="../../collections/beach/beach.html"><button class="catbtn">Beach</button></a>
+    </nav>
+
+    <!-- Sub-Category Filter Buttons -->
+    <div class="subfilter-container">
+        <button class="subfilter-btn active" data-subfilter="all">All Gym Styles</button>
+        <button class="subfilter-btn" data-subfilter="tees">Performance Tees</button>
+        <button class="subfilter-btn" data-subfilter="shorts">Compression Shorts</button>
+        <button class="subfilter-btn" data-subfilter="joggers">Training Joggers</button>
+        <button class="subfilter-btn" data-subfilter="hoodies">Tech Hoodies</button>
+    </div>
+
+    <!-- Controls Toolbar -->
+    <div class="toolbar-container">
+        <div class="toolbar-count">
+            Showing <b>Gym & Athleisure Collection</b>
+        </div>
+        <div class="toolbar-sort">
+            <label for="sortSelect">Sort By</label>
+            <select id="sortSelect">
+                <option value="featured">Featured Collection</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Customer Rated</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Product Grid for Gym Collection -->
+    <main class="item-shop" data-category="gym">
+        <!-- Card 1 -->
+        <article class="cart-item" data-id="gym_1" data-category="tees" data-price="1299" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">DRY-FIT TECH</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="../img/gym.jpg" alt="Aero-Vent Dry-Fit Performance Tee" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">PERFORMANCE TEE</span>
+                <p>Aero-Vent Dry-Fit Performance Tee</p>
+                <div class="star-rating">★★★★★ <span>4.9 (165)</span></div>
+                <div class="price-section">
+                    <b>₹1,299</b>
+                    <span class="original-price">₹1,799</span>
+                    <span class="discount-tag">28% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="cart-item" data-id="gym_2" data-category="shorts" data-price="1799" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">2-IN-1 LINER</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=800&auto=format&fit=crop&q=80"
+                    alt="2-in-1 Compression Running Shorts" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">RUNNING SHORTS</span>
+                <p>2-in-1 Compression Running Shorts</p>
+                <div class="star-rating">★★★★★ <span>4.8 (112)</span></div>
+                <div class="price-section">
+                    <b>₹1,799</b>
+                    <span class="original-price">₹2,399</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="cart-item" data-id="gym_3" data-category="joggers" data-price="2399" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">4-WAY FLEX</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=800&auto=format&fit=crop&q=80"
+                    alt="4-Way Stretch Tapered Training Joggers" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">TRAINING JOGGERS</span>
+                <p>4-Way Stretch Tapered Training Joggers</p>
+                <div class="star-rating">★★★★★ <span>4.9 (98)</span></div>
+                <div class="price-section">
+                    <b>₹2,399</b>
+                    <span class="original-price">₹3,199</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="cart-item" data-id="gym_4" data-category="tees" data-price="1199" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">ANTI-ODOR IONIC</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80"
+                    alt="Seamless Anti-Odor Muscle Tank" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">MUSCLE TANKS</span>
+                <p>Seamless Anti-Odor Muscle Tank</p>
+                <div class="star-rating">★★★★★ <span>4.7 (81)</span></div>
+                <div class="price-section">
+                    <b>₹1,199</b>
+                    <span class="original-price">₹1,599</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="cart-item" data-id="gym_5" data-category="hoodies" data-price="2699" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">TECH FLEECE</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80"
+                    alt="Tech-Fleece Lightweight Gym Hoodie" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">TECH HOODIES</span>
+                <p>Tech-Fleece Lightweight Gym Hoodie</p>
+                <div class="star-rating">★★★★★ <span>4.9 (73)</span></div>
+                <div class="price-section">
+                    <b>₹2,699</b>
+                    <span class="original-price">₹3,599</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="cart-item" data-id="gym_6" data-category="shorts" data-price="1499" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">MESH INSET</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800&auto=format&fit=crop&q=80"
+                    alt="Breathable Mesh Inset Training Shorts" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">GYM SHORTS</span>
+                <p>Breathable Mesh Inset Training Shorts</p>
+                <div class="star-rating">★★★★★ <span>4.7 (66)</span></div>
+                <div class="price-section">
+                    <b>₹1,499</b>
+                    <span class="original-price">₹1,999</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="cart-item" data-id="gym_7" data-category="tees" data-price="1699" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">COMPRESSION FIT</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80"
+                    alt="Compression Base Layer Thermal Top" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">BASE LAYER</span>
+                <p>Compression Base Layer Thermal Top</p>
+                <div class="star-rating">★★★★★ <span>4.8 (89)</span></div>
+                <div class="price-section">
+                    <b>₹1,699</b>
+                    <span class="original-price">₹2,299</span>
+                    <span class="discount-tag">26% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="cart-item" data-id="gym_8" data-category="joggers" data-price="4499" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">RESPONSIVE CUSHION</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=800&auto=format&fit=crop&q=80"
+                    alt="Ultra-Lightweight Cross-Trainer Sneakers" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">FOOTWEAR</span>
+                <p>Ultra-Lightweight Cross-Trainer Sneakers</p>
+                <div class="star-rating">★★★★★ <span>4.9 (94)</span></div>
+                <div class="price-section">
+                    <b>₹4,499</b>
+                    <span class="original-price">₹5,999</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+    </main>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-crown'></i></div>
+                <div class="trust-text">
+                    <h4>Dry-Fit Microfiber</h4>
+                    <p>4-Way hyper-stretch mobility</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-package'></i></div>
+                <div class="trust-text">
+                    <h4>Express Delivery</h4>
+                    <p>Complimentary on orders ₹2,999+</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-refresh'></i></div>
+                <div class="trust-text">
+                    <h4>Hassle-Free Exchanges</h4>
+                    <p>30-Day doorstep exchanges</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-shield-quarter'></i></div>
+                <div class="trust-text">
+                    <h4>Secure Checkout</h4>
+                    <p>256-Bit SSL encrypted payments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Luxury Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">NOVA</div>
+                <p>Performance athletic wear, 4-way stretch gym joggers, moisture-wicking training tees, and compression
+                    essentials designed for peak athletic output.</p>
+                <div class="socials">
+                    <i class='bx bxl-instagram' title="Instagram"></i>
+                    <i class='bx bxl-facebook' title="Facebook"></i>
+                    <i class='bx bxl-twitter' title="Twitter"></i>
+                    <i class='bx bxl-pinterest' title="Pinterest"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="../../collections/linen/linen.html">Linen Fabric</a></li>
+                    <li><a href="../../collections/streetwear/streetwear.html">Streetwear</a></li>
+                    <li><a href="../../collections/utility/utility.html">Utility Jackets</a></li>
+                    <li><a href="../../collections/oldmoney/oldmoney.html">Old Money</a></li>
+                    <li><a href="../../collections/office/office.html">Office Wear</a></li>
+                    <li><a href="../../collections/party/party.html">Party Wear</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Client Care</h4>
+                <ul>
+                    <li><a href="#">Contact Atelier</a></li>
+                    <li><a href="#">Shipping & Duties</a></li>
+                    <li><a href="#">Athletic Care Guide</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Size & Fit Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>The Insider Club</h4>
+                <p>Receive private collection previews, private sales, and exclusive invitations.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="button">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 NOVA Luxury Fashion Inc. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification">
+        <i class='bx bx-check-circle'></i>
+        <span id="toastMessage">Item added to your shopping bag.</span>
+        <a href="../../checkout/checkout.html">View Bag</a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="topBtn" aria-label="Back to top"><i class='bx bx-chevron-up'></i></button>
+
+    <!-- Centralized Data Store & Client Script -->
+    <script src="../../data/products.js"></script>
+    <script src="../../js/catalog-renderer.js"></script>
+    <script src="gym.js"></script>
+</body>
+
+</html>

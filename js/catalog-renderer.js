@@ -20,13 +20,12 @@ function getAppRoot() {
     const rawPath = window.location.pathname.replace(/\\/g, '/');
     const path = decodeURIComponent(rawPath).toLowerCase();
 
-    // Check if we are inside any 2-level subfolder (like /man category/pants/, /man category/watches/, etc.)
-    const subCategories = ['/pants/', '/shirts/', '/shoes/', '/sunglasses/', '/wallet/', '/watches/'];
-    if (path.includes('/man category/') && subCategories.some(sub => path.includes(sub))) {
+    // Check if we are inside any 2-level subfolder (like /man category/pants/, /season/winterc/, /collections/linen/, etc.)
+    if (path.includes('/man category/') || path.includes('/season/') || path.includes('/collections/')) {
         return '../../';
     }
     // Check if we are inside any 1-level folder
-    const topFolders = ['/man category/', '/landingpage/', '/checkout/', '/itempage/', '/signin/', '/signup/'];
+    const topFolders = ['/man category/', '/season/', '/collections/', '/landingpage/', '/checkout/', '/itempage/', '/signin/', '/signup/'];
     if (topFolders.some(f => path.includes(f))) {
         return '../';
     }
@@ -483,6 +482,29 @@ async function initCatalogGrid() {
         }
     } catch (e) {
         // Backend offline, fallback to local store
+    }
+
+    // 3. Fallback to existing static HTML cards in the container if products array is empty
+    if (!products || products.length === 0) {
+        const existingCards = container.querySelectorAll('.cart-item');
+        if (existingCards.length > 0) {
+            products = Array.from(existingCards).map(card => {
+                const pNum = parseFloat(card.getAttribute('data-price')) || 1999;
+                return {
+                    id: card.getAttribute('data-id') || ('prod_' + Math.random().toString(36).substr(2, 9)),
+                    name: card.querySelector('.card-content p')?.innerText.trim() || 'Product',
+                    category: card.getAttribute('data-category') || category,
+                    price: pNum,
+                    originalPrice: parseInt(pNum * 1.35),
+                    discount: card.querySelector('.discount-tag')?.innerText.trim() || '25% OFF',
+                    image: card.querySelector('img')?.src || '',
+                    badge: card.querySelector('.item-badge')?.innerText.trim() || '',
+                    badgeType: card.querySelector('.item-badge')?.classList.contains('gold') ? 'gold' : '',
+                    rating: parseFloat(card.getAttribute('data-rating')) || 4.8,
+                    reviewCount: 75
+                };
+            });
+        }
     }
 
     globalCategoryProducts = [...products];

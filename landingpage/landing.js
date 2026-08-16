@@ -22,11 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // ================= 2. FEATURED CARDS CLICK NAVIGATION =================
     cards.forEach(card => {
         card.style.cursor = 'pointer';
+        const parentLink = card.closest('a');
+        if (parentLink) return; // Native <a> handles click navigation cleanly
+
         const title = card.querySelector('h3')?.innerText.trim().toLowerCase() || '';
 
         card.addEventListener('click', (e) => {
-            // If card has specific id, let that handler run or route specifically
-            if (card.id === 'sunglasspage' || title.includes('sunglass')) {
+            // Featured Collections
+            if (title.includes('lenin') || title.includes('linen')) {
+                window.location.href = "../collections/linen/linen.html";
+            } else if (title.includes('street')) {
+                window.location.href = "../collections/streetwear/streetwear.html";
+            } else if (title.includes('utility')) {
+                window.location.href = "../collections/utility/utility.html";
+            } else if (title.includes('old money') || title.includes('money')) {
+                window.location.href = "../collections/oldmoney/oldmoney.html";
+            } else if (title.includes('office')) {
+                window.location.href = "../collections/office/office.html";
+            } else if (title.includes('party')) {
+                window.location.href = "../collections/party/party.html";
+            } else if (title.includes('gym')) {
+                window.location.href = "../collections/gym/gym.html";
+            } else if (title.includes('beach')) {
+                window.location.href = "../collections/beach/beach.html";
+            // Accessories & Departments
+            } else if (card.id === 'sunglasspage' || title.includes('sunglass')) {
                 window.location.href = "../man category/sunglasses/sunglasses.html";
             } else if (card.id === 'shoespage' || title.includes('shoe')) {
                 window.location.href = "../man category/shoes/shoes.html";
@@ -34,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = "../man category/watches/watches.html";
             } else if (card.id === 'walletpage' || title.includes('wallet')) {
                 window.location.href = "../man category/wallet/wallet.html";
-            } else if (title.includes('pant') || title.includes('money') || title.includes('gym')) {
+            } else if (title.includes('pant')) {
                 window.location.href = "../man category/pants/pants.html";
             } else {
                 window.location.href = "../man category/shirts/shirts.html";

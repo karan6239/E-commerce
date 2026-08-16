@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="referrer" content="no-referrer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Riviera Collection – NOVA Luxury</title>
+    <meta name="description"
+        content="Discover 100% French linen shirts, Cuban collar resort shirts, seersucker trousers, and lightweight Mediterranean blazers by NOVA.">
+    <link rel="stylesheet" href="summer.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        ☀️ SUMMER SOLSTICE 2026: COMPLIMENTARY EXPRESS SHIPPING OVER ₹2,999 <span>• CODE: RIVIERA</span>
+    </div>
+
+    <!-- Glassmorphic Header -->
+    <header>
+        <div class="parent">
+            <div class="navbar">
+                <div class="logo">
+                    <a id="logo" href="../../landingpage/landing.html">NOVA</a>
+                </div>
+
+                <div class="icon">
+                    <div id="searchinput">
+                        <input type="search" placeholder="Search summer collection..." id="searchi">
+                        <button id="searchbtn">Search</button>
+                    </div>
+
+                    <i class='bx bx-search search-icon' title="Search collection"></i>
+                    <i class='bx bx-heart' title="Wishlist"></i>
+                    <i class='bx bx-shopping-bag' title="Shopping Bag"><span id="cartCount"></span></i>
+                    <i class='bx bx-user' id="userIcon" title="Account"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Editorial Category Hero -->
+    <section class="category-hero">
+        <span class="sub-heading"><i class='bx bx-sun'></i> Summer Solstice 2026</span>
+        <h1>The Riviera & Linen Collection</h1>
+        <p>Breezy European linen, open-stitch knits, and relaxed tailored silhouettes designed for sun-drenched days,
+            coastal getaways, and effortless warmth.</p>
+
+        <div class="season-highlights">
+            <div class="highlight-pill"><i class='bx bx-wind'></i> Air-Weave Breathability (99%)</div>
+            <div class="highlight-pill"><i class='bx bx-sun'></i> UPF 50+ UV Defense</div>
+            <div class="highlight-pill"><i class='bx bx-leaf'></i> 100% Pure Normandy Flax</div>
+        </div>
+    </section>
+
+    <!-- Category & Season Switcher Pills -->
+    <nav class="cat-btn">
+        <a href="../../season/summer/summer.html"><button class="catbtn active-cat">Summer</button></a>
+        <a href="../../season/winterc/winterc.html"><button class="catbtn">Winter</button></a>
+        <a href="../../season/neutral/neutral.html"><button class="catbtn">Neutral</button></a>
+        <a href="../../man category/shirts/shirts.html"><button class="catbtn">Shirts</button></a>
+        <a href="../../man category/pants/pants.html"><button class="catbtn">Pants</button></a>
+        <a href="../../man category/sunglasses/sunglasses.html"><button class="catbtn">Sunglasses</button></a>
+        <a href="../../man category/shoes/shoes.html"><button class="catbtn">Shoes</button></a>
+    </nav>
+
+    <!-- Summer Sub-Category Filters -->
+    <div class="subfilter-container">
+        <button class="subfilter-btn active" data-subfilter="all">All Summer Essentials</button>
+        <button class="subfilter-btn" data-subfilter="linen">French Linen Shirts</button>
+        <button class="subfilter-btn" data-subfilter="resort">Resort & Silk Polos</button>
+        <button class="subfilter-btn" data-subfilter="shorts">Shorts & Chinos</button>
+        <button class="subfilter-btn" data-subfilter="blazers">Summer Blazers</button>
+    </div>
+
+    <!-- Controls Toolbar -->
+    <div class="toolbar-container">
+        <div class="toolbar-count">
+            Showing <b>Summer Luxury Collection</b>
+        </div>
+        <div class="toolbar-sort">
+            <label for="sortSelect">Sort By</label>
+            <select id="sortSelect">
+                <option value="featured">Featured Collection</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Customer Rated</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Product Grid for Summer Collection -->
+    <main class="item-shop" data-category="summer">
+        <!-- Card 1 -->
+        <article class="cart-item" data-id="summer_1" data-category="linen" data-price="2499" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">100% FRENCH LINEN</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80"
+                    alt="Riviera Pure French Linen Shirt" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">FRENCH LINEN</span>
+                <p>Riviera Pure French Linen Shirt</p>
+                <div class="star-rating">★★★★★ <span>4.9 (110)</span></div>
+                <div class="price-section">
+                    <b>₹2,499</b>
+                    <span class="original-price">₹3,299</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="cart-item" data-id="summer_2" data-category="resort" data-price="2199" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">RESORT SILK</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80"
+                    alt="Sicilian Camp-Collar Resort Shirt" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">RESORT WEAR</span>
+                <p>Sicilian Camp-Collar Resort Shirt</p>
+                <div class="star-rating">★★★★★ <span>4.8 (85)</span></div>
+                <div class="price-section">
+                    <b>₹2,199</b>
+                    <span class="original-price">₹2,899</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="cart-item" data-id="summer_3" data-category="shorts" data-price="2799" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">AIR-WEAVE COTTON</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&auto=format&fit=crop&q=80"
+                    alt="Lightweight Seersucker Drawstring Pants" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">SEERSUCKER</span>
+                <p>Lightweight Seersucker Drawstring Pants</p>
+                <div class="star-rating">★★★★★ <span>4.7 (64)</span></div>
+                <div class="price-section">
+                    <b>₹2,799</b>
+                    <span class="original-price">₹3,699</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="cart-item" data-id="summer_4" data-category="shorts" data-price="1999" data-rating="4.6">
+            <div class="card-image-wrap">
+                <span class="item-badge">BREATHABLE FLAX</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=800&auto=format&fit=crop&q=80"
+                    alt="Tailored Italian Linen Bermuda Shorts" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">LINEN SHORTS</span>
+                <p>Tailored Italian Linen Bermuda Shorts</p>
+                <div class="star-rating">★★★★★ <span>4.6 (57)</span></div>
+                <div class="price-section">
+                    <b>₹1,999</b>
+                    <span class="original-price">₹2,599</span>
+                    <span class="discount-tag">23% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="cart-item" data-id="summer_5" data-category="resort" data-price="2899" data-rating="5.0">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">SILK BLEND</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1625910513413-562a9bd65cb5?w=800&auto=format&fit=crop&q=80"
+                    alt="Silk-Cotton Breathable Knit Polo" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">LUXURY KNIT</span>
+                <p>Silk-Cotton Breathable Knit Polo</p>
+                <div class="star-rating">★★★★★ <span>5.0 (79)</span></div>
+                <div class="price-section">
+                    <b>₹2,899</b>
+                    <span class="original-price">₹3,799</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="cart-item" data-id="summer_6" data-category="resort" data-price="2699" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">ARTISANAL CROCHET</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop&q=80"
+                    alt="Aegean Sea Open-Knit Crochet Top" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">OPEN KNIT</span>
+                <p>Aegean Sea Open-Knit Crochet Top</p>
+                <div class="star-rating">★★★★★ <span>4.8 (46)</span></div>
+                <div class="price-section">
+                    <b>₹2,699</b>
+                    <span class="original-price">₹3,499</span>
+                    <span class="discount-tag">23% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="cart-item" data-id="summer_7" data-category="resort" data-price="1299" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">ORGANIC SLUB</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80"
+                    alt="Coastal Slub Cotton Minimalist Tee" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">SLUB TEE</span>
+                <p>Coastal Slub Cotton Minimalist Tee</p>
+                <div class="star-rating">★★★★★ <span>4.7 (98)</span></div>
+                <div class="price-section">
+                    <b>₹1,299</b>
+                    <span class="original-price">₹1,699</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="cart-item" data-id="summer_8" data-category="linen" data-price="2299" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">SUN-WASHED</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=800&auto=format&fit=crop&q=80"
+                    alt="Tropical Chambray Summer Button-Down" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">CHAMBRAY</span>
+                <p>Tropical Chambray Summer Button-Down</p>
+                <div class="star-rating">★★★★★ <span>4.8 (61)</span></div>
+                <div class="price-section">
+                    <b>₹2,299</b>
+                    <span class="original-price">₹2,999</span>
+                    <span class="discount-tag">23% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="cart-item" data-id="summer_9" data-category="shorts" data-price="2599" data-rating="4.6">
+            <div class="card-image-wrap">
+                <span class="item-badge">LIGHTWEIGHT CHINO</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80"
+                    alt="Relaxed Breathable Chino Trousers" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">CHINOS</span>
+                <p>Relaxed Breathable Chino Trousers</p>
+                <div class="star-rating">★★★★★ <span>4.6 (53)</span></div>
+                <div class="price-section">
+                    <b>₹2,599</b>
+                    <span class="original-price">₹3,399</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 10 -->
+        <article class="cart-item" data-id="summer_10" data-category="blazers" data-price="5999" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">MEDITERRANEAN CUT</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80"
+                    alt="Unstructured Cotton-Linen Summer Blazer" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">SUMMER BLAZER</span>
+                <p>Unstructured Cotton-Linen Summer Blazer</p>
+                <div class="star-rating">★★★★★ <span>4.9 (44)</span></div>
+                <div class="price-section">
+                    <b>₹5,999</b>
+                    <span class="original-price">₹7,999</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 11 -->
+        <article class="cart-item" data-id="summer_11" data-category="linen" data-price="2499" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">PURE LINEN</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=800&auto=format&fit=crop&q=80"
+                    alt="Sky Blue Striped Linen Overshirt" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">STRIPED LINEN</span>
+                <p>Sky Blue Striped Linen Overshirt</p>
+                <div class="star-rating">★★★★★ <span>4.8 (68)</span></div>
+                <div class="price-section">
+                    <b>₹2,499</b>
+                    <span class="original-price">₹3,299</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 12 -->
+        <article class="cart-item" data-id="summer_12" data-category="resort" data-price="3999" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">HANDMADE IN SPAIN</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i
+                        class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&auto=format&fit=crop&q=80"
+                    alt="Handcrafted Espadrilles Sand Suede" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">RESORT FOOTWEAR</span>
+                <p>Handcrafted Espadrilles Sand Suede</p>
+                <div class="star-rating">★★★★★ <span>4.9 (75)</span></div>
+                <div class="price-section">
+                    <b>₹3,999</b>
+                    <span class="original-price">₹5,199</span>
+                    <span class="discount-tag">23% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+    </main>
+
+    <!-- Value Proposition / Trust Strip -->
+    <section class="trust-strip">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-crown'></i></div>
+                <div class="trust-text">
+                    <h4>Artisanal Craftsmanship</h4>
+                    <p>Finest Normandy flax & organic cottons</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-package'></i></div>
+                <div class="trust-text">
+                    <h4>Express Summer Delivery</h4>
+                    <p>Complimentary on orders ₹2,999+</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-refresh'></i></div>
+                <div class="trust-text">
+                    <h4>Hassle-Free Exchanges</h4>
+                    <p>30-Day doorstep resort exchanges</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-shield-quarter'></i></div>
+                <div class="trust-text">
+                    <h4>Secure Checkout</h4>
+                    <p>256-Bit SSL encrypted payments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Luxury Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">NOVA</div>
+                <p>Elevated summer resort fashion, breezy pure linen shirts, relaxed seersucker silhouettes, and
+                    timeless coastal essentials for the refined wardrobe.</p>
+                <div class="socials">
+                    <i class='bx bxl-instagram' title="Instagram"></i>
+                    <i class='bx bxl-facebook' title="Facebook"></i>
+                    <i class='bx bxl-twitter' title="Twitter"></i>
+                    <i class='bx bxl-pinterest' title="Pinterest"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Season Capsules</h4>
+                <ul>
+                    <li><a href="../../season/summer/summer.html">Summer Riviera Edition</a></li>
+                    <li><a href="../../season/winterc/winterc.html">Winter Frost Collection</a></li>
+                    <li><a href="../../season/neutral/neutral.html">Minimalist Earth Neutrals</a></li>
+                    <li><a href="../../man category/shirts/shirts.html">Luxury Shirts</a></li>
+                    <li><a href="../../man category/pants/pants.html">Tailored Pants</a></li>
+                    <li><a href="../../man category/sunglasses/sunglasses.html">Luxury Sunglasses</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Client Care</h4>
+                <ul>
+                    <li><a href="#">Contact Atelier</a></li>
+                    <li><a href="#">Shipping & Duties</a></li>
+                    <li><a href="#">Linen Care Guide</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Size & Fit Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>The Insider Club</h4>
+                <p>Receive private summer collection previews, private sales, and exclusive invitations.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="button">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 NOVA Luxury Fashion Inc. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification">
+        <i class='bx bx-check-circle'></i>
+        <span id="toastMessage">Item added to your shopping bag.</span>
+        <a href="../../checkout/checkout.html">View Bag</a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="topBtn" aria-label="Back to top"><i class='bx bx-chevron-up'></i></button>
+
+    <!-- Centralized Data Store & Client Script -->
+    <script src="../../data/products.js"></script>
+    <script src="../../js/catalog-renderer.js"></script>
+    <script src="summer.js"></script>
+</body>
+
+</html>

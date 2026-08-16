@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="referrer" content="no-referrer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Neutrals Collection – NOVA Luxury</title>
+    <meta name="description" content="Discover heavy organic tees, camel wool overshirts, raw oatmeal trousers, and desert stone chore jackets by NOVA.">
+    <link rel="stylesheet" href="neutral.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        🍂 TIMELESS NEUTRALS 2026: COMPLIMENTARY EXPRESS SHIPPING OVER ₹2,999 <span>• CODE: EARTH</span>
+    </div>
+
+    <!-- Glassmorphic Header -->
+    <header>
+        <div class="parent">
+            <div class="navbar">
+                <div class="logo">
+                    <a id="logo" href="../../landingpage/landing.html">NOVA</a>
+                </div>
+                
+                <div class="icon">
+                    <div id="searchinput">
+                        <input type="search" placeholder="Search neutrals collection..." id="searchi">
+                        <button id="searchbtn">Search</button>
+                    </div>
+                    
+                    <i class='bx bx-search search-icon' title="Search collection"></i>
+                    <i class='bx bx-heart' title="Wishlist"></i>
+                    <i class='bx bx-shopping-bag' title="Shopping Bag"><span id="cartCount"></span></i>
+                    <i class='bx bx-user' id="userIcon" title="Account"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Editorial Category Hero -->
+    <section class="category-hero">
+        <span class="sub-heading"><i class='bx bx-compass'></i> Minimalist Neutrals 2026</span>
+        <h1>The Earth & Sand Collection</h1>
+        <p>Architectural minimalism sculpted in sand, camel, and taupe earth tones. Engineered from heavyweight raw cottons, unbleached linens, and natural botanical dyes.</p>
+        
+        <div class="season-highlights">
+            <div class="highlight-pill"><i class='bx bx-leaf'></i> 100% GOTS Certified Organic</div>
+            <div class="highlight-pill"><i class='bx bx-droplet'></i> Low-Impact Botanical Dyes</div>
+            <div class="highlight-pill"><i class='bx bx-grid-alt'></i> 365 Capsule Layering</div>
+        </div>
+    </section>
+
+    <!-- Category & Season Switcher Pills -->
+    <nav class="cat-btn">
+        <a href="../../season/neutral/neutral.html"><button class="catbtn active-cat">Neutral</button></a>
+        <a href="../../season/winterc/winterc.html"><button class="catbtn">Winter</button></a>
+        <a href="../../season/summer/summer.html"><button class="catbtn">Summer</button></a>
+        <a href="../../man category/shirts/shirts.html"><button class="catbtn">Shirts</button></a>
+        <a href="../../man category/pants/pants.html"><button class="catbtn">Pants</button></a>
+        <a href="../../man category/shoes/shoes.html"><button class="catbtn">Shoes</button></a>
+        <a href="../../man category/wallet/wallet.html"><button class="catbtn">Wallets</button></a>
+    </nav>
+
+    <!-- Neutral Sub-Category Filters -->
+    <div class="subfilter-container">
+        <button class="subfilter-btn active" data-subfilter="all">All Earth Essentials</button>
+        <button class="subfilter-btn" data-subfilter="tops">Minimalist Tops</button>
+        <button class="subfilter-btn" data-subfilter="layers">Overshirts & Jackets</button>
+        <button class="subfilter-btn" data-subfilter="trousers">Sand Trousers</button>
+        <button class="subfilter-btn" data-subfilter="knits">Waffle & Knitwear</button>
+    </div>
+
+    <!-- Controls Toolbar -->
+    <div class="toolbar-container">
+        <div class="toolbar-count">
+            Showing <b>Neutral Luxury Collection</b>
+        </div>
+        <div class="toolbar-sort">
+            <label for="sortSelect">Sort By</label>
+            <select id="sortSelect">
+                <option value="featured">Featured Collection</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Customer Rated</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Product Grid for Neutral Collection -->
+    <main class="item-shop" data-category="neutral">
+        <!-- Card 1 -->
+        <article class="cart-item" data-id="neutral_1" data-category="tops" data-price="1499" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">300 GSM ORGANIC</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80" alt="Sand-Washed Oversized Heavyweight Tee" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">HEAVYWEIGHT TEE</span>
+                <p>Sand-Washed Oversized Heavyweight Tee</p>
+                <div class="star-rating">★★★★★ <span>4.9 (134)</span></div>
+                <div class="price-section">
+                    <b>₹1,499</b>
+                    <span class="original-price">₹1,999</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="cart-item" data-id="neutral_2" data-category="layers" data-price="3899" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">CAMEL HAIR BLEND</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&auto=format&fit=crop&q=80" alt="Camel Wool-Blend Relaxed Overshirt" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">OVERSHIRT</span>
+                <p>Camel Wool-Blend Relaxed Overshirt</p>
+                <div class="star-rating">★★★★★ <span>4.9 (81)</span></div>
+                <div class="price-section">
+                    <b>₹3,899</b>
+                    <span class="original-price">₹5,199</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="cart-item" data-id="neutral_3" data-category="trousers" data-price="2999" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">RAW LINEN-COTTON</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800&auto=format&fit=crop&q=80" alt="Raw Oatmeal Pleated Relaxed Trousers" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">RELAXED TROUSERS</span>
+                <p>Raw Oatmeal Pleated Relaxed Trousers</p>
+                <div class="star-rating">★★★★★ <span>4.8 (67)</span></div>
+                <div class="price-section">
+                    <b>₹2,999</b>
+                    <span class="original-price">₹3,999</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="cart-item" data-id="neutral_4" data-category="layers" data-price="2799" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">HEAVY FRENCH TERRY</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80" alt="Taupe Luxury Minimalist French Terry Hoodie" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">MINIMALIST HOODIE</span>
+                <p>Taupe Luxury Minimalist French Terry Hoodie</p>
+                <div class="star-rating">★★★★★ <span>4.8 (94)</span></div>
+                <div class="price-section">
+                    <b>₹2,799</b>
+                    <span class="original-price">₹3,699</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="cart-item" data-id="neutral_5" data-category="layers" data-price="4299" data-rating="5.0">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">JAPANESE CANVAS</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1548883354-7622d03aca27?w=800&auto=format&fit=crop&q=80" alt="Desert Stone Utility Chore Jacket" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">CHORE JACKET</span>
+                <p>Desert Stone Utility Chore Jacket</p>
+                <div class="star-rating">★★★★★ <span>5.0 (73)</span></div>
+                <div class="price-section">
+                    <b>₹4,299</b>
+                    <span class="original-price">₹5,699</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="cart-item" data-id="neutral_6" data-category="knits" data-price="2199" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">WAFFLE TEXTURE</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80" alt="Textured Cream Waffle Knit Henley" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">WAFFLE KNIT</span>
+                <p>Textured Cream Waffle Knit Henley</p>
+                <div class="star-rating">★★★★★ <span>4.7 (59)</span></div>
+                <div class="price-section">
+                    <b>₹2,199</b>
+                    <span class="original-price">₹2,899</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="cart-item" data-id="neutral_7" data-category="trousers" data-price="2399" data-rating="4.6">
+            <div class="card-image-wrap">
+                <span class="item-badge">GOTS CERTIFIED</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=800&auto=format&fit=crop&q=80" alt="Clay Tapered Organic Lounge Sweatpants" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">LOUNGEWEAR</span>
+                <p>Clay Tapered Organic Lounge Sweatpants</p>
+                <div class="star-rating">★★★★★ <span>4.6 (52)</span></div>
+                <div class="price-section">
+                    <b>₹2,399</b>
+                    <span class="original-price">₹3,199</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="cart-item" data-id="neutral_8" data-category="layers" data-price="6499" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">TAILORED ATELIER</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&auto=format&fit=crop&q=80" alt="Bone Linen-Blend Minimalist Overcoat" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">OVERCOAT</span>
+                <p>Bone Linen-Blend Minimalist Overcoat</p>
+                <div class="star-rating">★★★★★ <span>4.9 (38)</span></div>
+                <div class="price-section">
+                    <b>₹6,499</b>
+                    <span class="original-price">₹8,499</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="cart-item" data-id="neutral_9" data-category="tops" data-price="2299" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">PURE COTTON POPLIN</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=800&auto=format&fit=crop&q=80" alt="Espresso Relaxed Fit Poplin Shirt" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">POPLIN SHIRT</span>
+                <p>Espresso Relaxed Fit Poplin Shirt</p>
+                <div class="star-rating">★★★★★ <span>4.8 (61)</span></div>
+                <div class="price-section">
+                    <b>₹2,299</b>
+                    <span class="original-price">₹2,999</span>
+                    <span class="discount-tag">23% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 10 -->
+        <article class="cart-item" data-id="neutral_10" data-category="knits" data-price="2699" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">100% MERINO</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80" alt="Warm Almond Merino Knit Vest" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">KNIT VEST</span>
+                <p>Warm Almond Merino Knit Vest</p>
+                <div class="star-rating">★★★★★ <span>4.7 (45)</span></div>
+                <div class="price-section">
+                    <b>₹2,699</b>
+                    <span class="original-price">₹3,499</span>
+                    <span class="discount-tag">23% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 11 -->
+        <article class="cart-item" data-id="neutral_11" data-category="trousers" data-price="3199" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">GURKHA WAISTBAND</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80" alt="Stone Grey Tailored Gurkha Pants" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">GURKHA PANTS</span>
+                <p>Stone Grey Tailored Gurkha Pants</p>
+                <div class="star-rating">★★★★★ <span>4.9 (68)</span></div>
+                <div class="price-section">
+                    <b>₹3,199</b>
+                    <span class="original-price">₹4,199</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 12 -->
+        <article class="cart-item" data-id="neutral_12" data-category="layers" data-price="4799" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">ITALIAN NUBUCK</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=800&auto=format&fit=crop&q=80" alt="Minimalist Taupe Nubuck Leather Low Sneakers" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">FOOTWEAR</span>
+                <p>Minimalist Taupe Nubuck Leather Low Sneakers</p>
+                <div class="star-rating">★★★★★ <span>4.9 (77)</span></div>
+                <div class="price-section">
+                    <b>₹4,799</b>
+                    <span class="original-price">₹6,299</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+    </main>
+
+    <!-- Value Proposition / Trust Strip -->
+    <section class="trust-strip">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-crown'></i></div>
+                <div class="trust-text">
+                    <h4>Artisanal Craftsmanship</h4>
+                    <p>Natural botanical dyes & raw weaves</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-package'></i></div>
+                <div class="trust-text">
+                    <h4>Express Earth Delivery</h4>
+                    <p>Complimentary on orders ₹2,999+</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-refresh'></i></div>
+                <div class="trust-text">
+                    <h4>Hassle-Free Exchanges</h4>
+                    <p>30-Day doorstep capsule exchanges</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-shield-quarter'></i></div>
+                <div class="trust-text">
+                    <h4>Secure Checkout</h4>
+                    <p>256-Bit SSL encrypted payments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Luxury Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">NOVA</div>
+                <p>Timeless minimalist fashion, raw organic silhouettes, soothing earth tones, and elevated everyday luxury essentials for discerning individuals.</p>
+                <div class="socials">
+                    <i class='bx bxl-instagram' title="Instagram"></i>
+                    <i class='bx bxl-facebook' title="Facebook"></i>
+                    <i class='bx bxl-twitter' title="Twitter"></i>
+                    <i class='bx bxl-pinterest' title="Pinterest"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Season Capsules</h4>
+                <ul>
+                    <li><a href="../../season/neutral/neutral.html">Minimalist Earth Neutrals</a></li>
+                    <li><a href="../../season/winterc/winterc.html">Winter Frost Collection</a></li>
+                    <li><a href="../../season/summer/summer.html">Summer Riviera Edition</a></li>
+                    <li><a href="../../man category/shirts/shirts.html">Luxury Shirts</a></li>
+                    <li><a href="../../man category/pants/pants.html">Tailored Pants</a></li>
+                    <li><a href="../../man category/wallet/wallet.html">Leather Wallets</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Client Care</h4>
+                <ul>
+                    <li><a href="#">Contact Atelier</a></li>
+                    <li><a href="#">Shipping & Duties</a></li>
+                    <li><a href="#">Organic Care Guide</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Size & Fit Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>The Insider Club</h4>
+                <p>Receive private neutral collection previews, private sales, and exclusive invitations.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="button">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 NOVA Luxury Fashion Inc. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification">
+        <i class='bx bx-check-circle'></i>
+        <span id="toastMessage">Item added to your shopping bag.</span>
+        <a href="../../checkout/checkout.html">View Bag</a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="topBtn" aria-label="Back to top"><i class='bx bx-chevron-up'></i></button>
+
+    <!-- Centralized Data Store & Client Script -->
+    <script src="../../data/products.js"></script>
+    <script src="../../js/catalog-renderer.js"></script>
+    <script src="neutral.js"></script>
+</body>
+
+</html>

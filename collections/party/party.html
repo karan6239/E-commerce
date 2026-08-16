@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="referrer" content="no-referrer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evening Gala & Party Wear Collection – NOVA Luxury</title>
+    <meta name="description" content="Discover midnight velvet tuxedo blazers, mulberry silk evening shirts, metallic floral dinner jackets, and tailored gala attire by NOVA.">
+    <link rel="stylesheet" href="party.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        ✨ MIDNIGHT CELEBRATION 2026: COMPLIMENTARY EXPRESS SHIPPING OVER ₹2,999 <span>• CODE: GALA26</span>
+    </div>
+
+    <!-- Glassmorphic Header -->
+    <header>
+        <div class="parent">
+            <div class="navbar">
+                <div class="logo">
+                    <a id="logo" href="../../landingpage/landing.html">NOVA</a>
+                </div>
+                
+                <div class="icon">
+                    <div id="searchinput">
+                        <input type="search" placeholder="Search party collection..." id="searchi">
+                        <button id="searchbtn">Search</button>
+                    </div>
+                    
+                    <i class='bx bx-search search-icon' title="Search collection"></i>
+                    <i class='bx bx-heart' title="Wishlist"></i>
+                    <i class='bx bx-shopping-bag' title="Shopping Bag"><span id="cartCount"></span></i>
+                    <i class='bx bx-user' id="userIcon" title="Account"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Editorial Category Hero -->
+    <section class="category-hero">
+        <span class="sub-heading"><i class='bx bx-sparkles'></i> Midnight Gala 2026</span>
+        <h1>Party & Evening Wear</h1>
+        <p>Opulence crafted for celebrations. Lustrous velvet tuxedos, mulberry silk satins, metallic jacquard dinner jackets, and luminous midnight elegance.</p>
+        
+        <div class="season-highlights">
+            <div class="highlight-pill"><i class='bx bx-star'></i> Lustrous Italian Velvet</div>
+            <div class="highlight-pill"><i class='bx bx-gem'></i> Mulberry Silk Satin</div>
+            <div class="highlight-pill"><i class='bx bx-party'></i> High-Impact Evening Cut</div>
+        </div>
+    </section>
+
+    <!-- Category Switcher Pills -->
+    <nav class="cat-btn">
+        <a href="../../collections/linen/linen.html"><button class="catbtn">Linen Fabric</button></a>
+        <a href="../../collections/streetwear/streetwear.html"><button class="catbtn">Streetwear</button></a>
+        <a href="../../collections/utility/utility.html"><button class="catbtn">Utility</button></a>
+        <a href="../../collections/oldmoney/oldmoney.html"><button class="catbtn">Old Money</button></a>
+        <a href="../../collections/office/office.html"><button class="catbtn">Office</button></a>
+        <a href="../../collections/party/party.html"><button class="catbtn active-cat">Party</button></a>
+        <a href="../../collections/gym/gym.html"><button class="catbtn">Gym</button></a>
+        <a href="../../collections/beach/beach.html"><button class="catbtn">Beach</button></a>
+    </nav>
+
+    <!-- Sub-Category Filter Buttons -->
+    <div class="subfilter-container">
+        <button class="subfilter-btn active" data-subfilter="all">All Party Styles</button>
+        <button class="subfilter-btn" data-subfilter="velvet">Velvet Blazers</button>
+        <button class="subfilter-btn" data-subfilter="silk">Silk Shirts</button>
+        <button class="subfilter-btn" data-subfilter="tuxedo">Tuxedos & Pants</button>
+        <button class="subfilter-btn" data-subfilter="shoes">Evening Shoes</button>
+    </div>
+
+    <!-- Controls Toolbar -->
+    <div class="toolbar-container">
+        <div class="toolbar-count">
+            Showing <b>Party Wear Collection</b>
+        </div>
+        <div class="toolbar-sort">
+            <label for="sortSelect">Sort By</label>
+            <select id="sortSelect">
+                <option value="featured">Featured Collection</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Customer Rated</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Product Grid for Party Collection -->
+    <main class="item-shop" data-category="party">
+        <!-- Card 1 -->
+        <article class="cart-item" data-id="party_1" data-category="velvet" data-price="7999" data-rating="5.0">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">MIDNIGHT VELVET</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://i.pinimg.com/1200x/48/a3/0a/48a30a84cf5104ba93a432e64412c5d3.jpg" alt="Midnight Velvet Peak Lapel Tuxedo Blazer" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">TUXEDO BLAZER</span>
+                <p>Midnight Velvet Peak Lapel Tuxedo Blazer</p>
+                <div class="star-rating">★★★★★ <span>5.0 (118)</span></div>
+                <div class="price-section">
+                    <b>₹7,999</b>
+                    <span class="original-price">₹10,999</span>
+                    <span class="discount-tag">27% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="cart-item" data-id="party_2" data-category="silk" data-price="3499" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">100% MULBERRY SILK</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80" alt="Mulberry Silk Satin Evening Shirt" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">SILK SHIRT</span>
+                <p>Mulberry Silk Satin Evening Shirt</p>
+                <div class="star-rating">★★★★★ <span>4.9 (87)</span></div>
+                <div class="price-section">
+                    <b>₹3,499</b>
+                    <span class="original-price">₹4,599</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="cart-item" data-id="party_3" data-category="velvet" data-price="8499" data-rating="5.0">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">GOLD JACQUARD</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80" alt="Metallic Gold Floral Jacquard Dinner Jacket" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">DINNER JACKET</span>
+                <p>Metallic Gold Floral Jacquard Dinner Jacket</p>
+                <div class="star-rating">★★★★★ <span>5.0 (64)</span></div>
+                <div class="price-section">
+                    <b>₹8,499</b>
+                    <span class="original-price">₹11,499</span>
+                    <span class="discount-tag">26% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="cart-item" data-id="party_4" data-category="tuxedo" data-price="3499" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">SATIN SIDE-STRIPE</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop&q=80" alt="Tailored Black Satin Tuxedo Trousers" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">TUXEDO PANTS</span>
+                <p>Tailored Black Satin Tuxedo Trousers</p>
+                <div class="star-rating">★★★★★ <span>4.8 (79)</span></div>
+                <div class="price-section">
+                    <b>₹3,499</b>
+                    <span class="original-price">₹4,599</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="cart-item" data-id="party_5" data-category="velvet" data-price="7499" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">EMERALD SILK VELVET</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&auto=format&fit=crop&q=80" alt="Deep Emerald Velvet Evening Blazer" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">EVENING BLAZER</span>
+                <p>Deep Emerald Velvet Evening Blazer</p>
+                <div class="star-rating">★★★★★ <span>4.9 (59)</span></div>
+                <div class="price-section">
+                    <b>₹7,499</b>
+                    <span class="original-price">₹9,999</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="cart-item" data-id="party_6" data-category="silk" data-price="2799" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">BAROQUE PRINT</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=800&auto=format&fit=crop&q=80" alt="Baroque Printed Open Collar Party Shirt" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">PARTY SHIRTS</span>
+                <p>Baroque Printed Open Collar Party Shirt</p>
+                <div class="star-rating">★★★★★ <span>4.7 (93)</span></div>
+                <div class="price-section">
+                    <b>₹2,799</b>
+                    <span class="original-price">₹3,699</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="cart-item" data-id="party_7" data-category="shoes" data-price="5999" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">PATENT LEATHER</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=800&auto=format&fit=crop&q=80" alt="Patent Leather Tuxedo Dress Loafers" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">FOOTWEAR</span>
+                <p>Patent Leather Tuxedo Dress Loafers</p>
+                <div class="star-rating">★★★★★ <span>4.9 (72)</span></div>
+                <div class="price-section">
+                    <b>₹5,999</b>
+                    <span class="original-price">₹7,999</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="cart-item" data-id="party_8" data-category="shoes" data-price="1699" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">SILK & CRYSTAL</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&auto=format&fit=crop&q=80" alt="Silk Bowtie & Crystal Lapel Pin Set" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">ACCESSORIES</span>
+                <p>Silk Bowtie & Crystal Lapel Pin Set</p>
+                <div class="star-rating">★★★★★ <span>4.8 (49)</span></div>
+                <div class="price-section">
+                    <b>₹1,699</b>
+                    <span class="original-price">₹2,299</span>
+                    <span class="discount-tag">26% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+    </main>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-crown'></i></div>
+                <div class="trust-text">
+                    <h4>Italian Velvet</h4>
+                    <p>Lustrous high-density silk plush</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-package'></i></div>
+                <div class="trust-text">
+                    <h4>Express Delivery</h4>
+                    <p>Complimentary on orders ₹2,999+</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-refresh'></i></div>
+                <div class="trust-text">
+                    <h4>Hassle-Free Exchanges</h4>
+                    <p>30-Day doorstep exchanges</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-shield-quarter'></i></div>
+                <div class="trust-text">
+                    <h4>Secure Checkout</h4>
+                    <p>256-Bit SSL encrypted payments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Luxury Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">NOVA</div>
+                <p>Party evening gala attire, plush midnight velvet tuxedos, and mulberry silk party essentials engineered for unforgettable celebrations.</p>
+                <div class="socials">
+                    <i class='bx bxl-instagram' title="Instagram"></i>
+                    <i class='bx bxl-facebook' title="Facebook"></i>
+                    <i class='bx bxl-twitter' title="Twitter"></i>
+                    <i class='bx bxl-pinterest' title="Pinterest"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="../../collections/linen/linen.html">Linen Fabric</a></li>
+                    <li><a href="../../collections/streetwear/streetwear.html">Streetwear</a></li>
+                    <li><a href="../../collections/utility/utility.html">Utility Jackets</a></li>
+                    <li><a href="../../collections/oldmoney/oldmoney.html">Old Money</a></li>
+                    <li><a href="../../collections/office/office.html">Office Wear</a></li>
+                    <li><a href="../../collections/party/party.html">Party Wear</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Client Care</h4>
+                <ul>
+                    <li><a href="#">Contact Atelier</a></li>
+                    <li><a href="#">Shipping & Duties</a></li>
+                    <li><a href="#">Velvet Care Guide</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Size & Fit Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>The Insider Club</h4>
+                <p>Receive private collection previews, private sales, and exclusive invitations.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="button">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 NOVA Luxury Fashion Inc. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification">
+        <i class='bx bx-check-circle'></i>
+        <span id="toastMessage">Item added to your shopping bag.</span>
+        <a href="../../checkout/checkout.html">View Bag</a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="topBtn" aria-label="Back to top"><i class='bx bx-chevron-up'></i></button>
+
+    <!-- Centralized Data Store & Client Script -->
+    <script src="../../data/products.js"></script>
+    <script src="../../js/catalog-renderer.js"></script>
+    <script src="party.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="referrer" content="no-referrer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Capsule Collection – NOVA Luxury</title>
+    <meta name="description" content="Explore virgin wool overcoats, 100% Mongolian cashmere knitwear, arctic down parkas, and shearling aviator jackets by NOVA.">
+    <link rel="stylesheet" href="winterc.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        ❄️ WINTER CAPSULE 2026: COMPLIMENTARY EXPRESS SHIPPING OVER ₹2,999 <span>• CODE: ARCTIC</span>
+    </div>
+
+    <!-- Glassmorphic Header -->
+    <header>
+        <div class="parent">
+            <div class="navbar">
+                <div class="logo">
+                    <a id="logo" href="../../landingpage/landing.html">NOVA</a>
+                </div>
+                
+                <div class="icon">
+                    <div id="searchinput">
+                        <input type="search" placeholder="Search winter collection..." id="searchi">
+                        <button id="searchbtn">Search</button>
+                    </div>
+                    
+                    <i class='bx bx-search search-icon' title="Search collection"></i>
+                    <i class='bx bx-heart' title="Wishlist"></i>
+                    <i class='bx bx-shopping-bag' title="Shopping Bag"><span id="cartCount"></span></i>
+                    <i class='bx bx-user' id="userIcon" title="Account"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Editorial Category Hero -->
+    <section class="category-hero">
+        <span class="sub-heading"><i class='bx bx-snowflake'></i> Winter Capsule 2026</span>
+        <h1>The Frost & Cashmere Collection</h1>
+        <p>Engineered for sub-zero warmth and sharp sartorial elegance. Featuring pure Mongolian cashmere, heavy Italian virgin wools, and weather-sealed down parkas.</p>
+        
+        <div class="season-highlights">
+            <div class="highlight-pill"><i class='bx bx-sun'></i> Thermal Insulation (-20°C)</div>
+            <div class="highlight-pill"><i class='bx bx-shield-quarter'></i> Storm-Proof Repellent Outer</div>
+            <div class="highlight-pill"><i class='bx bx-feather'></i> 100% Grade-A Pure Cashmere</div>
+        </div>
+    </section>
+
+    <!-- Category & Season Switcher Pills -->
+    <nav class="cat-btn">
+        <a href="../../season/winterc/winterc.html"><button class="catbtn active-cat">Winter</button></a>
+        <a href="../../season/summer/summer.html"><button class="catbtn">Summer</button></a>
+        <a href="../../season/neutral/neutral.html"><button class="catbtn">Neutral</button></a>
+        <a href="../../man category/shirts/shirts.html"><button class="catbtn">Shirts</button></a>
+        <a href="../../man category/pants/pants.html"><button class="catbtn">Pants</button></a>
+        <a href="../../man category/shoes/shoes.html"><button class="catbtn">Shoes</button></a>
+        <a href="../../man category/watches/watches.html"><button class="catbtn">Watches</button></a>
+    </nav>
+
+    <!-- Winter Sub-Category Filters -->
+    <div class="subfilter-container">
+        <button class="subfilter-btn active" data-subfilter="all">All Winter Essentials</button>
+        <button class="subfilter-btn" data-subfilter="overcoats">Overcoats & Parkas</button>
+        <button class="subfilter-btn" data-subfilter="cashmere">Cashmere & Knitwear</button>
+        <button class="subfilter-btn" data-subfilter="jackets">Heavy Jackets</button>
+        <button class="subfilter-btn" data-subfilter="pants">Thermal Trousers</button>
+    </div>
+
+    <!-- Controls Toolbar -->
+    <div class="toolbar-container">
+        <div class="toolbar-count">
+            Showing <b>Winter Luxury Collection</b>
+        </div>
+        <div class="toolbar-sort">
+            <label for="sortSelect">Sort By</label>
+            <select id="sortSelect">
+                <option value="featured">Featured Collection</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Customer Rated</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Product Grid for Winter Collection -->
+    <main class="item-shop" data-category="winterc">
+        <!-- Card 1 -->
+        <article class="cart-item" data-id="winterc_1" data-category="overcoats" data-price="7999" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">PURE VIRGIN WOOL</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&auto=format&fit=crop&q=80" alt="Imperial Double-Breasted Wool Overcoat" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">OVERCOATS</span>
+                <p>Imperial Double-Breasted Wool Overcoat</p>
+                <div class="star-rating">★★★★★ <span>4.9 (84)</span></div>
+                <div class="price-section">
+                    <b>₹7,999</b>
+                    <span class="original-price">₹10,999</span>
+                    <span class="discount-tag">27% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="cart-item" data-id="winterc_2" data-category="cashmere" data-price="4499" data-rating="5.0">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">100% CASHMERE</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&auto=format&fit=crop&q=80" alt="Mongolian Ribbed Cashmere Turtleneck" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">CASHMERE</span>
+                <p>Mongolian Ribbed Cashmere Turtleneck</p>
+                <div class="star-rating">★★★★★ <span>5.0 (92)</span></div>
+                <div class="price-section">
+                    <b>₹4,499</b>
+                    <span class="original-price">₹5,999</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="cart-item" data-id="winterc_3" data-category="jackets" data-price="9999" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">SHEARLING LINED</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&auto=format&fit=crop&q=80" alt="Alpine Shearling Aviator Jacket" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">AVIATOR JACKET</span>
+                <p>Alpine Shearling Aviator Jacket</p>
+                <div class="star-rating">★★★★★ <span>4.9 (61)</span></div>
+                <div class="price-section">
+                    <b>₹9,999</b>
+                    <span class="original-price">₹13,999</span>
+                    <span class="discount-tag">28% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="cart-item" data-id="winterc_4" data-category="jackets" data-price="2999" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">THERMAL FLANNEL</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=800&auto=format&fit=crop&q=80" alt="Heavyweight Flannel-Lined Overshirt" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">OVERSHIRT</span>
+                <p>Heavyweight Flannel-Lined Overshirt</p>
+                <div class="star-rating">★★★★★ <span>4.7 (49)</span></div>
+                <div class="price-section">
+                    <b>₹2,999</b>
+                    <span class="original-price">₹3,999</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="cart-item" data-id="winterc_5" data-category="overcoats" data-price="8499" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">ARCTIC PROOF -20°C</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800&auto=format&fit=crop&q=80" alt="Arctic Down Quilted Puffer Parka" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">PARKA</span>
+                <p>Arctic Down Quilted Puffer Parka</p>
+                <div class="star-rating">★★★★★ <span>4.9 (77)</span></div>
+                <div class="price-section">
+                    <b>₹8,499</b>
+                    <span class="original-price">₹11,999</span>
+                    <span class="discount-tag">29% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="cart-item" data-id="winterc_6" data-category="pants" data-price="3499" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">THERMAL SELVEDGE</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop&q=80" alt="Selvedge Thermal Fleece-Lined Denim" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">WINTER DENIM</span>
+                <p>Selvedge Thermal Fleece-Lined Denim</p>
+                <div class="star-rating">★★★★★ <span>4.8 (58)</span></div>
+                <div class="price-section">
+                    <b>₹3,499</b>
+                    <span class="original-price">₹4,599</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="cart-item" data-id="winterc_7" data-category="cashmere" data-price="3799" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">MERINO WOOL</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=800&auto=format&fit=crop&q=80" alt="Cable-Knit Merino Wool Cardigan" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">KNITWEAR</span>
+                <p>Cable-Knit Merino Wool Cardigan</p>
+                <div class="star-rating">★★★★★ <span>4.8 (63)</span></div>
+                <div class="price-section">
+                    <b>₹3,799</b>
+                    <span class="original-price">₹4,999</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="cart-item" data-id="winterc_8" data-category="overcoats" data-price="6999" data-rating="5.0">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">LIMITED RUN</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80" alt="Velvet Midnight Tailored Evening Blazer" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">EVENING BLAZER</span>
+                <p>Velvet Midnight Tailored Evening Blazer</p>
+                <div class="star-rating">★★★★★ <span>5.0 (42)</span></div>
+                <div class="price-section">
+                    <b>₹6,999</b>
+                    <span class="original-price">₹9,499</span>
+                    <span class="discount-tag">26% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="cart-item" data-id="winterc_9" data-category="cashmere" data-price="2699" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">500 GSM COTTON</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80" alt="Heavyweight French Terry Winter Hoodie" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">HEAVY HOODIE</span>
+                <p>Heavyweight French Terry Winter Hoodie</p>
+                <div class="star-rating">★★★★★ <span>4.7 (88)</span></div>
+                <div class="price-section">
+                    <b>₹2,699</b>
+                    <span class="original-price">₹3,599</span>
+                    <span class="discount-tag">25% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 10 -->
+        <article class="cart-item" data-id="winterc_10" data-category="jackets" data-price="4999" data-rating="4.8">
+            <div class="card-image-wrap">
+                <span class="item-badge">HYDRO-SHIELD</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop&q=80" alt="Storm-Proof Technical Windbreaker" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">WINDBREAKER</span>
+                <p>Storm-Proof Technical Windbreaker</p>
+                <div class="star-rating">★★★★★ <span>4.8 (51)</span></div>
+                <div class="price-section">
+                    <b>₹4,999</b>
+                    <span class="original-price">₹6,499</span>
+                    <span class="discount-tag">23% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 11 -->
+        <article class="cart-item" data-id="winterc_11" data-category="pants" data-price="3299" data-rating="4.7">
+            <div class="card-image-wrap">
+                <span class="item-badge">ITALIAN WOOL</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop&q=80" alt="Tailored Charcoal Pleated Wool Trousers" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">WOOL TROUSERS</span>
+                <p>Tailored Charcoal Pleated Wool Trousers</p>
+                <div class="star-rating">★★★★★ <span>4.7 (67)</span></div>
+                <div class="price-section">
+                    <b>₹3,299</b>
+                    <span class="original-price">₹4,299</span>
+                    <span class="discount-tag">23% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+
+        <!-- Card 12 -->
+        <article class="cart-item" data-id="winterc_12" data-category="jackets" data-price="5499" data-rating="4.9">
+            <div class="card-image-wrap">
+                <span class="item-badge gold">HANDCRAFTED</span>
+                <button class="card-wishlist-btn" title="Add to Wishlist" type="button"><i class='bx bx-heart'></i></button>
+                <img src="https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=800&auto=format&fit=crop&q=80" alt="Suede Chelsea Boot Shearling Lined" loading="lazy">
+            </div>
+            <div class="card-content">
+                <span class="card-category">FOOTWEAR</span>
+                <p>Suede Chelsea Boot Shearling Lined</p>
+                <div class="star-rating">★★★★★ <span>4.9 (73)</span></div>
+                <div class="price-section">
+                    <b>₹5,499</b>
+                    <span class="original-price">₹7,299</span>
+                    <span class="discount-tag">24% OFF</span>
+                </div>
+                <button class="shopadd" type="button"><i class='bx bx-shopping-bag'></i> Add to Bag</button>
+            </div>
+        </article>
+    </main>
+
+    <!-- Value Proposition / Trust Strip -->
+    <section class="trust-strip">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-crown'></i></div>
+                <div class="trust-text">
+                    <h4>Artisanal Craftsmanship</h4>
+                    <p>Finest cashmere & Italian virgin wool</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-package'></i></div>
+                <div class="trust-text">
+                    <h4>Express Winter Delivery</h4>
+                    <p>Complimentary on orders ₹2,999+</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-refresh'></i></div>
+                <div class="trust-text">
+                    <h4>Hassle-Free Exchanges</h4>
+                    <p>30-Day doorstep winter exchanges</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class='bx bx-shield-quarter'></i></div>
+                <div class="trust-text">
+                    <h4>Secure Checkout</h4>
+                    <p>256-Bit SSL encrypted payments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Luxury Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">NOVA</div>
+                <p>Timeless winter fashion, masterfully tailored coats, pure cashmere layers, and elevated sub-zero essentials for the modern wardrobe.</p>
+                <div class="socials">
+                    <i class='bx bxl-instagram' title="Instagram"></i>
+                    <i class='bx bxl-facebook' title="Facebook"></i>
+                    <i class='bx bxl-twitter' title="Twitter"></i>
+                    <i class='bx bxl-pinterest' title="Pinterest"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Season Capsules</h4>
+                <ul>
+                    <li><a href="../../season/winterc/winterc.html">Winter Frost Collection</a></li>
+                    <li><a href="../../season/summer/summer.html">Summer Riviera Edition</a></li>
+                    <li><a href="../../season/neutral/neutral.html">Minimalist Earth Neutrals</a></li>
+                    <li><a href="../../man category/shirts/shirts.html">Luxury Shirts</a></li>
+                    <li><a href="../../man category/pants/pants.html">Tailored Pants</a></li>
+                    <li><a href="../../man category/shoes/shoes.html">Handcrafted Footwear</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Client Care</h4>
+                <ul>
+                    <li><a href="#">Contact Atelier</a></li>
+                    <li><a href="#">Shipping & Duties</a></li>
+                    <li><a href="#">Winter Care Guide</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Size & Fit Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>The Insider Club</h4>
+                <p>Receive private winter collection previews, private sales, and exclusive invitations.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="button">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 NOVA Luxury Fashion Inc. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification">
+        <i class='bx bx-check-circle'></i>
+        <span id="toastMessage">Item added to your shopping bag.</span>
+        <a href="../../checkout/checkout.html">View Bag</a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="topBtn" aria-label="Back to top"><i class='bx bx-chevron-up'></i></button>
+
+    <!-- Centralized Data Store & Client Script -->
+    <script src="../../data/products.js"></script>
+    <script src="../../js/catalog-renderer.js"></script>
+    <script src="winterc.js"></script>
+</body>
+
+</html>
